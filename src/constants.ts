@@ -1,0 +1,1 @@
+export const LANGS: string[] = ['en', 'ru'];
