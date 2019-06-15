@@ -3,6 +3,7 @@ export default {
   phone: '+38 (050) 543-60-17',
   email: 'severynov.sergii@gmail.com',
   github: 'https://github.com/severjason',
-  website: 'https://jswebdev.net/',
+  website: 'https://jswebdev.net',
+  facebook: 'https://www.facebook.com/severjason',
   linkedIn: 'https://www.linkedin.com/in/severjason',
 };

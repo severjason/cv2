@@ -1,5 +1,11 @@
 {
   "cv.firstName": "Sergii",
   "cv.lastName": "Severynov",
-  "cv.title": "Front-End Developer"
+  "cv.title": "Front-End Developer",
+  "cv.social": {
+    "github": "Checkout my GitHub",
+    "linkedIn": "Follow me on LinkedIn",
+    "facebook": "Follow me on Facebook",
+    "website": "My website"
+  }
 }
