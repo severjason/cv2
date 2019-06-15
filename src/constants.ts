@@ -13,7 +13,7 @@ export const LANGS: Langs = {
     messages: messagesEn,
   },
   ua: {
-    lang: 'ua.ts',
+    lang: 'ua',
     messages: messagesUa,
   }
 };

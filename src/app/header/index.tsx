@@ -5,9 +5,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Titles from './Titles';
 import Photo from './Photo';
 import Socials from './Socials';
+import LangSwitcher from './LangSwitcher';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    position: 'relative',
     padding: theme.spacing(1),
     backgroundColor: theme.palette.primary.light,
   },
@@ -20,6 +22,7 @@ const Header: React.FC<{}> = () => {
   return (
     <React.Fragment>
       <Grid className={classes.root}>
+        <LangSwitcher/>
         <Grid container={true}>
           <Photo/>
           <Titles/>
