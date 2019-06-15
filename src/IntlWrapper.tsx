@@ -2,20 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Redirect, RouteComponentProps, withRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { LANGS } from './constants';
-import messagesEn from './translations/en.json';
-import messagesRu from './translations/ru.json';
 
 interface MatchParams {
   lang: string;
 }
 
-const messages = {
-  'en': messagesEn,
-  'ru': messagesRu,
-};
-
 const IntlWrapper: React.FC<RouteComponentProps<MatchParams>> = ({children, match: {params}}) => {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(LANGS.en.lang);
 
   useEffect(() => {
     if (params.lang) {
@@ -23,11 +16,11 @@ const IntlWrapper: React.FC<RouteComponentProps<MatchParams>> = ({children, matc
     }
   }, [params]);
 
-  return LANGS.includes(lang) ? (
-    <IntlProvider locale={lang} messages={messages[lang]}>
+  return LANGS[lang] ? (
+    <IntlProvider locale={lang} messages={LANGS[lang].messages}>
       {children}
     </IntlProvider>
-  ) : <Redirect to="/en"/>;
+  ) : <Redirect to={`/${LANGS.en.lang}`}/>;
 };
 
 export default withRouter(IntlWrapper);

@@ -1,3 +1,21 @@
-export const LANGS: string[] = ['en', 'ru'];
+import messagesEn from './translations/en.json';
+import messagesUa from './translations/ua.json';
+
+interface Langs {
+  [key: string]: {
+    lang: string;
+    messages: typeof messagesEn;
+  };
+}
+export const LANGS: Langs = {
+  en: {
+    lang: 'en',
+    messages: messagesEn,
+  },
+  ua: {
+    lang: 'ua.ts',
+    messages: messagesUa,
+  }
+};
 
 export const DEFAULT_DATE_FORMAT: string = 'DD.MM.YYYY';
