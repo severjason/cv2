@@ -59,8 +59,32 @@ const Info: React.FC = () => {
   return (
     <Grid container={true} className={classes.root}>
       <Item icon={<CakeIcon/>} title={moment(data.dateOfBirth, DEFAULT_DATE_FORMAT).format('ll')}/>
-      <Item icon={<PhoneIcon/>} title={<a className={classes.link} href={`tel:${data.phone}`}>{data.phone}</a>}/>
-      <Item icon={<EmailIcon/>} title={<a className={classes.link} href={`mailto:${data.email}`}>{data.email}</a>}/>
+      <Item
+        icon={<PhoneIcon/>}
+        title={
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+            href={`tel:${data.phone}`}
+          >
+            {data.phone}
+          </a>
+        }
+      />
+      <Item
+        icon={<EmailIcon/>}
+        title={
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+            href={`mailto:${data.email}`}
+          >
+            {data.email}
+          </a>
+        }
+      />
 {/*      <Item
         icon={<PublicIcon/>}
         title={<a className={classes.link} href={data.website}>{data.website.split('//').pop()}</a>}

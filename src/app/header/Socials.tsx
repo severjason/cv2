@@ -26,13 +26,13 @@ const Socials: React.FC<InjectedIntlProps> = ({intl}) => {
 
   return (
     <Grid container={true} className={classes.root} justify="center">
-      <IconButton title={social.github} href={data.github} className={classes.button}>
+      <IconButton target="_blank" title={social.github} href={data.github} className={classes.button}>
         <GithubIcon/>
       </IconButton>
-      <IconButton title={social.linkedIn} href={data.linkedIn} className={classes.button}>
+      <IconButton target="_blank" title={social.linkedIn} href={data.linkedIn} className={classes.button}>
         <LinkedinIcon/>
       </IconButton>
-      <IconButton title={social.facebook} href={data.facebook} className={classes.button}>
+      <IconButton target="_blank" title={social.facebook} href={data.facebook} className={classes.button}>
         <Facebook/>
       </IconButton>
     </Grid>
