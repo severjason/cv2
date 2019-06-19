@@ -3,10 +3,14 @@
   "cv.lastName": "Северинов",
   "cv.title": "Front-End Разработчик",
   "cv.langSwitch": "Переключиться на английский",
+  "cv.at": "в",
   "cv.social": {
     "github": "Мой GitHub",
     "linkedIn": "Мой LinkedIn",
     "facebook": "Мой Facebook",
     "website": "Мой сайт"
+  },
+  "cv.experience": {
+    "title": "Опыт"
   }
 }

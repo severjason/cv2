@@ -2,7 +2,9 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 
+import './global.css';
 import Header from './app/header';
+import Main from './app/main';
 import IntlWrapper from './IntlWrapper';
 
 const useStyles = makeStyles(theme => ({
@@ -22,6 +24,7 @@ const App: React.FC<{}> = () => {
     <IntlWrapper>
       <Container className={classes.root}>
         <Header/>
+        <Main/>
       </Container>
     </IntlWrapper>
   );

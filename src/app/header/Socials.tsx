@@ -22,17 +22,17 @@ const Socials: React.FC<InjectedIntlProps> = ({intl}) => {
 
   const classes = useStyles();
 
-  const social: any = intl.messages['cv.social'];
+  const getSocial = (value: string) => intl.messages[`cv.social.${value}`];
 
   return (
     <Grid container={true} className={classes.root} justify="center">
-      <IconButton target="_blank" title={social.github} href={data.github} className={classes.button}>
+      <IconButton target="_blank" title={getSocial('github')} href={data.github} className={classes.button}>
         <GithubIcon/>
       </IconButton>
-      <IconButton target="_blank" title={social.linkedIn} href={data.linkedIn} className={classes.button}>
+      <IconButton target="_blank" title={getSocial('linkedIn')} href={data.linkedIn} className={classes.button}>
         <LinkedinIcon/>
       </IconButton>
-      <IconButton target="_blank" title={social.facebook} href={data.facebook} className={classes.button}>
+      <IconButton target="_blank" title={getSocial('facebook')} href={data.facebook} className={classes.button}>
         <Facebook/>
       </IconButton>
     </Grid>

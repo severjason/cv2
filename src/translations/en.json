@@ -3,10 +3,14 @@
   "cv.lastName": "Severynov",
   "cv.title": "Front-End Developer",
   "cv.langSwitch": "Switch to Ukrainian",
+  "cv.at": "at",
   "cv.social": {
     "github": "Checkout my GitHub",
     "linkedIn": "Follow me on LinkedIn",
     "facebook": "Follow me on Facebook",
     "website": "My website"
+  },
+  "cv.experience": {
+    "title": "Experience"
   }
 }
