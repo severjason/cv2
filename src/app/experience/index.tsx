@@ -20,6 +20,7 @@ const Experience: React.FC<InjectedIntlProps> = ({intl}) => {
           endDate={exp.endDate}
           startDate={exp.startDate}
           role={exp.role}
+          list={exp.list}
         />
       ))}
     </Grid>

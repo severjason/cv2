@@ -3,4 +3,5 @@ export interface ExperienceItem {
   endDate: string;
   company: string;
   role: string;
+  list: string[];
 }

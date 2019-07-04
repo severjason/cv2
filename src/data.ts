@@ -12,13 +12,15 @@ export default {
         startDate: 'May 2018',
         endDate: 'present',
         company: 'LightIT',
-        role: 'Front-End Developer'
+        role: 'Front-End Developer',
+        list: ['test info', 'test info 2'],
       },
       {
-        startDate: 'May 2018',
-        endDate: 'present',
-        company: 'LightIT',
-        role: 'Front-End Developer'
+        startDate: 'August 2018',
+        endDate: 'April 2019',
+        company: 'Upwork',
+        role: 'Front-End Developer',
+        list: [],
       }
     ],
     ua: [
@@ -26,13 +28,15 @@ export default {
         startDate: 'Май 2018',
         endDate: 'наст. время',
         company: 'LightIT',
-        role: 'Front-End Розробник'
+        role: 'Front-End Розробник',
+        list: [],
       },
       {
-        startDate: 'May 2018',
-        endDate: 'present',
-        company: 'LightIT',
-        role: 'Front-End Developer'
+        startDate: 'Август 2018',
+        endDate: 'Апрель 2019',
+        company: 'Upwork',
+        role: 'Front-End Розробник',
+        list: [],
       }
     ]
   },
