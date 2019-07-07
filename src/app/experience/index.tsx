@@ -15,12 +15,13 @@ const Experience: React.FC<InjectedIntlProps> = ({intl}) => {
       <Title icon={WorkIcon} text={intl.messages['cv.experience.title']}/>
       {data.experience[intl.locale] && data.experience[intl.locale].map((exp: ExperienceItem, index: number) => (
         <Item
-          key={`${exp.startDate}-${index}`}
+          key={index}
           company={exp.company}
           endDate={exp.endDate}
           startDate={exp.startDate}
           role={exp.role}
           list={exp.list}
+          link={exp.link}
         />
       ))}
     </Grid>

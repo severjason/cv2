@@ -5,12 +5,11 @@ import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListIcon from '@material-ui/icons/Done';
 import Typography from '@material-ui/core/Typography';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import CalendarIcon from '@material-ui/icons/DateRange';
 
 import { ExperienceItem } from '../interfaces';
+import { ListIcon } from '../shared';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,46 +17,67 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
-  company: {
+  role: {
     fontWeight: 600,
+  },
+  company: {
+    // color: theme.palette.text.primary,
+    fontWeight: 600,
+  },
+  link: {
+    '&:hover': {
+      color: theme.palette.primary.main,
+    }
+  },
+  divider: {
+    margin: `0 ${theme.spacing(1)}px`,
   },
   time: {
     alignItems: 'center',
     display: 'flex',
     paddingRight: theme.spacing(1),
   },
-  listItem: {
-    paddingTop: 0,
-    paddingBottom: 0,
-  },
   icon: {
-    color: theme.palette.primary.main,
-    fontSize: 14,
-  }
+    fontSize: 18,
+    paddingRight: theme.spacing(1),
+  },
+  listItem: {
+    padding: 0,
+  },
 }));
 
-interface Props extends ExperienceItem, InjectedIntlProps {
+interface Props extends ExperienceItem {
 }
 
-const Item: React.FC<Props> = ({company, endDate, role, startDate, intl, list}) => {
+const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) => {
 
   const classes = useStyles();
 
   return (
     <Paper className={classes.root}>
-      <Grid container={true} wrap="wrap">
-        <Grid item={true} xs={12} sm={5} className={classes.time}>
+      <Grid container={true} wrap="wrap" direction="column">
+        <Grid container={true} >
+          <Typography variant="body2" className={classes.role}>
+            {role}
+            <span className={classes.divider}>{`|`}</span>
+          </Typography>
+          {link ? (
+            <a color="primary" href={link} target="_blank" className={classes.link} rel="noopener noreferrer">
+              <Typography color="primary" variant="body2" className={classes.company}>
+                {company}
+              </Typography>
+            </a>
+          ) : (
+            <Typography color="primary" variant="body2" className={classes.company}>
+              {company}
+            </Typography>
+          )}
+
+        </Grid>
+        <Grid item={true} className={classes.time}>
+          <CalendarIcon color="primary" className={classes.icon}/>
           <Typography color="primary">
             {`${startDate} - ${endDate}`}
-          </Typography>
-        </Grid>
-        <Grid item={true} xs={12} sm={7} >
-          <Typography>
-            {role}
-            {` ${intl.messages['cv.at']} `}
-            <span className={classes.company}>
-              {company}
-            </span>
           </Typography>
         </Grid>
       </Grid>
@@ -65,9 +85,7 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, intl, list}) 
         <List disablePadding={true}>
           {list.map(text => (
             <ListItem key={text} className={classes.listItem}>
-              <ListItemIcon>
-                <ListIcon className={classes.icon} />
-              </ListItemIcon>
+              <ListIcon/>
               <ListItemText>
                 {text}
               </ListItemText>
@@ -79,4 +97,4 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, intl, list}) 
   );
 };
 
-export default injectIntl(Item);
+export default Item;
