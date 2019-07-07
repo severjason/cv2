@@ -13,6 +13,7 @@ export default {
         endDate: 'present',
         company: 'LightIT',
         role: 'Front-End Developer',
+        link: 'https://light-it.net/',
         list: ['test info', 'test info 2'],
       },
       {
@@ -20,6 +21,7 @@ export default {
         endDate: 'April 2019',
         company: 'Upwork',
         role: 'Front-End Developer',
+        link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
         list: [],
       }
     ],
@@ -29,6 +31,7 @@ export default {
         endDate: 'наст. время',
         company: 'LightIT',
         role: 'Front-End Розробник',
+        link: 'https://light-it.net/',
         list: [],
       },
       {
@@ -36,8 +39,49 @@ export default {
         endDate: 'Апрель 2019',
         company: 'Upwork',
         role: 'Front-End Розробник',
+        link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
         list: [],
       }
     ]
   },
+  skills: {
+    en: [
+      {
+        title: 'Main',
+        list: [
+          {
+            name: 'React',
+            important: true,
+          },
+          {
+            name: 'Typescript',
+          }
+        ]
+      },
+      {
+        title: 'Other',
+        list: [
+          {
+            name: 'HTML',
+          },
+          {
+            name: 'CSS',
+          }
+        ]
+      }
+    ],
+    ua: [
+      {
+        title: 'Основные',
+        list: [
+          {
+            name: 'React',
+            important: true,
+          },
+          {
+            name: 'Typescript',
+          }]
+      }
+    ]
+  }
 };

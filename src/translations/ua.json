@@ -12,5 +12,8 @@
   },
   "cv.experience": {
     "title": "Опыт"
+  },
+  "cv.skills": {
+    "title": "Навыки"
   }
 }

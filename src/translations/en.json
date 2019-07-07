@@ -12,5 +12,8 @@
   },
   "cv.experience": {
     "title": "Experience"
+  },
+  "cv.skills": {
+    "title": "Skills"
   }
 }
