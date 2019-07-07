@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import Experience from '../experience';
+import Skills from '../skills';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,11 +25,11 @@ const Main: React.FC = () => {
   return (
     <Grid className={classes.root}>
       <Grid container={true} className={classes.container}>
-        <Grid item={true} xs={12} sm={6} className={classes.item}>
+        <Grid item={true} xs={12} sm={7} className={classes.item}>
           <Experience/>
         </Grid>
-        <Grid item={true} xs={12} sm={6} className={classes.item}>
-          <Experience/>
+        <Grid item={true} xs={12} sm={5} className={classes.item}>
+          <Skills/>
         </Grid>
       </Grid>
     </Grid>
