@@ -9,6 +9,9 @@ const theme = createMuiTheme({
     h5: {
       textTransform: 'uppercase',
     },
+    body2: {
+      fontSize: '1.1rem',
+    },
     fontFamily: `'Exo 2', Helvetica, sans-serif`,
   },
   palette: {
