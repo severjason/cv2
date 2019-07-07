@@ -10,10 +10,12 @@ import data from '../../data';
 
 const Experience: React.FC<InjectedIntlProps> = ({intl}) => {
 
+  const expData = data[intl.locale] && data[intl.locale].experience;
+
   return (
     <Grid container={true}>
       <Title icon={WorkIcon} text={intl.messages['cv.experience.title']}/>
-      {data.experience[intl.locale] && data.experience[intl.locale].map((exp: ExperienceItem, index: number) => (
+      {expData && expData.map((exp: ExperienceItem, index: number) => (
         <Item
           key={index}
           company={exp.company}

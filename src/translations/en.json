@@ -15,5 +15,11 @@
   },
   "cv.skills": {
     "title": "Skills"
+  },
+  "cv.langs": {
+    "title": "Languages"
+  },
+  "cv.education": {
+    "title": "Education"
   }
 }

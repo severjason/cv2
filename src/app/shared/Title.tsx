@@ -10,8 +10,6 @@ const useStyles = makeStyles(theme => ({
   icon: {
     paddingRight: theme.spacing(2),
   },
-  text: {
-  },
 }));
 
 interface OwnProps {
@@ -28,7 +26,7 @@ const Title: React.FC<OwnProps> = ({icon, text}) => {
   return (
     <Grid container={true} className={classes.root} alignItems="center" >
       <Icon color="primary" className={classes.icon}/>
-      <Typography color="primary" variant="h5" className={classes.text}>
+      <Typography color="primary" variant="h5">
         {text}
       </Typography>
     </Grid>

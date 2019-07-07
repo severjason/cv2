@@ -4,11 +4,13 @@ import Grid from '@material-ui/core/Grid';
 
 import Experience from '../experience';
 import Skills from '../skills';
+import Langs from '../langs';
+import Education from '../education';
 
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: 500,
-    backgroundColor: theme.palette.primary.contrastText
+    backgroundColor: '#f1f3f4',
   },
   container: {
     padding: theme.spacing(1),
@@ -30,6 +32,8 @@ const Main: React.FC = () => {
         </Grid>
         <Grid item={true} xs={12} sm={5} className={classes.item}>
           <Skills/>
+          <Langs/>
+          <Education/>
         </Grid>
       </Grid>
     </Grid>

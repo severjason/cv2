@@ -15,5 +15,11 @@
   },
   "cv.skills": {
     "title": "Навыки"
+  },
+  "cv.langs": {
+    "title": "Языки"
+  },
+  "cv.education": {
+    "title": "Образование"
   }
 }

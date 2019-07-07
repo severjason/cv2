@@ -22,13 +22,13 @@ const Skills: React.FC<InjectedIntlProps> = ({intl}) => {
 
   const classes = useStyles();
 
-  const skillsData = data.skills[intl.locale];
+  const skillsData = data[intl.locale] && data[intl.locale].skills;
 
   return (
     <Grid container={true}>
       <Title icon={SkillIcon} text={intl.messages['cv.skills.title']}/>
       <Paper className={classes.paper}>
-        {skillsData && data.skills[intl.locale].map((skill: SkillsData) => (
+        {skillsData && skillsData.map((skill: SkillsData) => (
           <Item
             key={skill.title}
             title={skill.title}
