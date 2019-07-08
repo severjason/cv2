@@ -24,7 +24,7 @@ const LangSwitcher: React.FC<Props> = ({intl}) => {
 
   const classes = useStyles();
 
-  const Icon = intl.locale === LANGS.en.lang ? UAflag : USflag;
+  const Icon = intl.locale === LANGS.en.lang ? USflag : UAflag;
 
   const link = intl.locale === LANGS.en.lang ? LANGS.ua.lang : LANGS.en.lang;
 
