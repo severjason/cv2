@@ -1,9 +1,21 @@
+export interface CVData {
+  experience: ExperienceItem[];
+  skills: SkillsData[];
+  langs: LangItem[];
+  education: EducationItem[];
+}
+
 export interface ExperienceItem {
   startDate: string;
   endDate: string;
   company: string;
   role: string;
-  list: string[];
+  list: ListItem[];
+  link?: string;
+}
+
+export interface ListItem {
+  text: string;
   link?: string;
 }
 

@@ -9,6 +9,9 @@ import { SkillsData } from '../interfaces';
 const useStyles = makeStyles(theme => ({
   root: {
     marginBottom: theme.spacing(1),
+    '&:last-child': {
+      marginBottom: 0,
+    },
   },
   title: {
     fontWeight: 600,

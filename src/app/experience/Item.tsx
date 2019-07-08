@@ -6,7 +6,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
 import CalendarIcon from '@material-ui/icons/DateRange';
+import OpenIcon from '@material-ui/icons/Launch';
 
 import { ExperienceItem } from '../interfaces';
 import { ListIcon } from '../shared';
@@ -43,6 +45,9 @@ const useStyles = makeStyles(theme => ({
   },
   listItem: {
     padding: 0,
+  },
+  visit: {
+    fontSize: 16,
   },
 }));
 
@@ -83,11 +88,21 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
       </Grid>
       {list.length > 0 && (
         <List disablePadding={true}>
-          {list.map(text => (
-            <ListItem key={text} className={classes.listItem}>
+          {list.map(item => (
+            <ListItem key={item.text} className={classes.listItem}>
               <ListIcon/>
               <ListItemText>
-                {text}
+                {item.text}
+                {item.link && (
+                  <IconButton
+                    color="primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={item.link}
+                  >
+                    <OpenIcon className={classes.visit}/>
+                  </IconButton>
+                )}
               </ListItemText>
             </ListItem>
           ))}

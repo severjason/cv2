@@ -1,4 +1,6 @@
-const en = {
+import { CVData } from './app/interfaces';
+
+const en: CVData = {
   experience: [
     {
       startDate: 'May 2018',
@@ -6,7 +8,15 @@ const en = {
       company: 'LightIT',
       role: 'Front-End Developer',
       link: 'https://light-it.net/',
-      list: ['test info', 'test info 2'],
+      list: [
+        {
+          text: 'test info',
+          link: 'https://light-it.net/'
+        },
+        {
+          text: 'test info 2',
+        }
+      ],
     },
     {
       startDate: 'August 2018',
@@ -64,7 +74,7 @@ const en = {
   ],
 };
 
-const ua = {
+const ua: CVData = {
   experience: [
     {
       startDate: 'Май 2018',

@@ -6,11 +6,12 @@ import Experience from '../experience';
 import Skills from '../skills';
 import Langs from '../langs';
 import Education from '../education';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: 500,
-    backgroundColor: '#f1f3f4',
+    backgroundColor: grey[100],
   },
   container: {
     padding: theme.spacing(1),
