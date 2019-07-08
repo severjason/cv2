@@ -124,6 +124,14 @@ const ua: CVData = {
     {
       title: 'English',
       level: 'Upper-intermediate'
+    },
+    {
+      title: 'Ukrainian',
+      level: 'Native'
+    },
+    {
+      title: 'Russian',
+      level: 'Native'
     }
   ],
   education: [
