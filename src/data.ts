@@ -56,20 +56,34 @@ const en: CVData = {
     {
       title: 'English',
       level: 'Upper-intermediate'
+    },
+    {
+      title: 'Ukrainian',
+      level: 'Native'
+    },
+    {
+      title: 'Russian',
+      level: 'Native'
     }
   ],
   education: [
     {
+      startDate: '2016',
+      endDate: '2017',
+      company: 'Brain Academy, Zaporizhzhia',
+      role: 'Web Development',
+    },
+    {
       startDate: '2005',
       endDate: '2009',
-      company: 'Zaporizhzhya National Technical University',
+      company: 'Zaporizhzhian National Technical University',
       role: 'Finance',
     },
     {
       startDate: '2004',
       endDate: '2009',
-      company: 'Zaporizhzhya National Technical University',
-      role: 'Технология строения авиационных двигателей',
+      company: 'Zaporizhzhian National Technical University',
+      role: 'Aviation Engines Production Technology',
     }
   ],
 };
@@ -113,6 +127,12 @@ const ua: CVData = {
     }
   ],
   education: [
+    {
+      startDate: '2016',
+      endDate: '2017',
+      company: 'Brain Academy, Запо',
+      role: 'Web Розробка',
+    },
     {
       startDate: '2005',
       endDate: '2009',

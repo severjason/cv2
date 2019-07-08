@@ -6,6 +6,12 @@ import Typography from '@material-ui/core/Typography';
 import { LangItem } from '../interfaces';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    marginBottom: theme.spacing(1),
+    '&:last-child': {
+      marginBottom: 0,
+    }
+  },
   title: {
     fontWeight: 600,
   },
@@ -22,7 +28,7 @@ const Item: React.FC<Props> = ({title, level}) => {
   const classes = useStyles();
 
   return (
-    <Grid container={true} alignItems="center">
+    <Grid container={true} alignItems="center" className={classes.root}>
       <Typography variant="body2" className={classes.title}>
         {title}:
       </Typography>

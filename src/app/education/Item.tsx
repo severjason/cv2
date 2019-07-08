@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
+    '&:last-child': {
+      marginBottom: 0,
+    },
   },
   role: {
     fontWeight: 600,

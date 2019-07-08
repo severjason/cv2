@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
+    '&:last-child': {
+      marginBottom: 0,
+    },
   },
   role: {
     fontWeight: 600,
@@ -32,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   divider: {
-    margin: `0 ${theme.spacing(1)}px`,
+    margin: theme.spacing(0, 1),
   },
   time: {
     alignItems: 'center',
