@@ -8,10 +8,7 @@ import { SkillsData } from '../interfaces';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginBottom: theme.spacing(1),
-    '&:last-child': {
-      marginBottom: 0,
-    },
+    marginBottom: 0,
   },
   title: {
     fontWeight: 600,
@@ -19,6 +16,9 @@ const useStyles = makeStyles(theme => ({
   chip: {
     margin: theme.spacing(1),
     marginLeft: 0,
+  },
+  important: {
+    fontWeight: 600,
   }
 }));
 
@@ -42,9 +42,12 @@ const Item: React.FC<Props> = ({title, list}) => {
             key={skill.name}
             label={skill.name}
             size="small"
-            className={classes.chip}
+            className={[
+              classes.chip,
+              skill.important ? classes.important : ''
+            ].join(' ')}
             color="primary"
-            variant={skill.important ? 'default' : 'outlined'}
+            variant={'outlined'}
           />
         ))}
       </Grid>

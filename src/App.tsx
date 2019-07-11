@@ -7,12 +7,17 @@ import Header from './app/header';
 import Footer from './app/footer';
 import Main from './app/main';
 import IntlWrapper from './IntlWrapper';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100%',
     boxShadow: theme.shadows[2],
     paddingLeft: 0,
     paddingRight: 0,
+    backgroundColor: grey[100],
   },
 }));
 

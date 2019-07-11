@@ -20,7 +20,7 @@ const Header: React.FC<{}> = () => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <div>
       <Grid className={classes.root}>
         <LangSwitcher/>
         <Grid container={true}>
@@ -29,7 +29,7 @@ const Header: React.FC<{}> = () => {
         </Grid>
       </Grid>
       <Socials/>
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -16,6 +16,7 @@ export interface ExperienceItem {
 
 export interface ListItem {
   text: string;
+  technologies?: string;
   link?: string;
 }
 

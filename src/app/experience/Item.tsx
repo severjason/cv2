@@ -29,11 +29,6 @@ const useStyles = makeStyles(theme => ({
     // color: theme.palette.text.primary,
     fontWeight: 600,
   },
-  link: {
-    '&:hover': {
-      color: theme.palette.primary.main,
-    }
-  },
   divider: {
     margin: theme.spacing(0, 1),
   },
@@ -45,6 +40,9 @@ const useStyles = makeStyles(theme => ({
   icon: {
     fontSize: 18,
     paddingRight: theme.spacing(1),
+  },
+  iconButton: {
+    padding: theme.spacing(0.625),
   },
   listItem: {
     padding: 0,
@@ -64,21 +62,24 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
   return (
     <Paper className={classes.root}>
       <Grid container={true} wrap="wrap" direction="column">
-        <Grid container={true} >
+        <Grid container={true}>
           <Typography variant="body2" className={classes.role}>
             {role}
             <span className={classes.divider}>{`|`}</span>
           </Typography>
-          {link ? (
-            <a color="primary" href={link} target="_blank" className={classes.link} rel="noopener noreferrer">
-              <Typography color="primary" variant="body2" className={classes.company}>
-                {company}
-              </Typography>
-            </a>
-          ) : (
-            <Typography color="primary" variant="body2" className={classes.company}>
-              {company}
-            </Typography>
+          <Typography color="primary" variant="body2" className={classes.company}>
+            {company}
+          </Typography>
+          {link && (
+            <IconButton
+              color="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={link}
+              className={classes.iconButton}
+            >
+              <OpenIcon className={classes.visit}/>
+            </IconButton>
           )}
 
         </Grid>
@@ -102,9 +103,14 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
                     target="_blank"
                     rel="noopener noreferrer"
                     href={item.link}
+                    className={classes.iconButton}
                   >
                     <OpenIcon className={classes.visit}/>
                   </IconButton>
+                )}
+                <br/>
+                {item.technologies && (
+                  `Technologies: ${item.technologies}.`
                 )}
               </ListItemText>
             </ListItem>
