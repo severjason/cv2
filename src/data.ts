@@ -10,11 +10,22 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'test info',
-          link: 'https://light-it.net/'
+          text: 'Developing UI for a financial institution project specializing in short term high-risk lending. ' +
+            'Technologies - Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
         },
         {
-          text: 'test info 2',
+          text: 'Cryptocurrency news analysis project. Implemented new design and rebuilt from SPA to SSR+PWA. ' +
+            'Technologies - React, Redux, Next.js, Styled-components, Semantic-UI, Highcharts, Jest + enzyme.',
+          link: 'https://hypeanalysis.com/',
+        },
+        {
+          text: 'Different short-term projects.'
+        },
+        {
+          text: 'Taking part in LightIT Frontend Labs as one of speakers.',
+        },
+        {
+          text: 'Interns code review and training, conducting an interviews.'
         }
       ],
     },
@@ -24,33 +35,103 @@ const en: CVData = {
       company: 'Upwork',
       role: 'Front-End Developer',
       link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
-      list: [],
-    }
+      list: [
+        {
+          text: 'localinsights.io - long term Next.js/Material design team member, ' +
+            'I was responsible for adding new features, design update, ' +
+            'bug fixing, code refactoring of existing application. ' +
+            'Technologies - React, Redux, Next.js, Material-UI, firebase.',
+          link: 'https://localinsights.io/',
+        }
+      ],
+    },
+    {
+      startDate: 'August 2014',
+      endDate: 'February 2015',
+      company: 'oDesk',
+      role: 'PHP/JS Developer',
+      list: [
+        {
+          text: 'Short-term projects.',
+        }
+      ],
+    },
   ],
   skills: [
     {
-      title: 'Main',
+      title: 'Programming languages',
+      list: [
+        {
+          name: 'JavaScript (ES6)',
+          important: true,
+        },
+        {
+          name: 'Typescript',
+          important: true,
+        },
+      ]
+    },
+    {
+      title: 'Technologies',
       list: [
         {
           name: 'React',
           important: true,
         },
         {
-          name: 'Typescript',
-        }
+          name: 'Redux',
+          important: true,
+        },
+        {
+          name: 'Material-UI',
+          important: true,
+        },
+        {name: 'SSR (Next.js)'},
+        {name: 'Jest + enzyme'},
+        {name: 'AWS-Amplify'},
+        {name: 'Semantic-UI'},
+        {name: 'Highcharts'},
+        {name: 'Bootstrap'},
+        {name: 'Functional programming'},
+      ]
+    },
+    {
+      title: 'Web',
+      list: [
+        {name: 'HTML'},
+        {name: 'CSS'},
+        {name: 'PWA'},
+        {name: 'Firebase'},
+        {name: 'SVG'},
+        {name: 'SCSS'},
+        {name: 'Styled-components'},
+      ]
+    },
+    {
+      title: 'Development tools',
+      list: [
+        {name: 'WebStorm'},
+      ]
+    },
+    {
+      title: 'Operating systems',
+      list: [
+        {name: 'Linux (Ubuntu)'},
+        {name: 'Windows'},
       ]
     },
     {
       title: 'Other',
       list: [
-        {
-          name: 'HTML',
-        },
-        {
-          name: 'CSS',
-        }
+        {name: 'git'},
+        {name: 'CRA'},
+        {name: 'Webpack'},
+        {name: 'CI/CD'},
+        {name: 'lodash'},
+        {name: 'Docker (basic level)'},
+        {name: 'SEO (basic level)'},
       ]
-    }
+    },
   ],
   langs: [
     {
