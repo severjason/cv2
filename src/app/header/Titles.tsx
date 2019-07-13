@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { fade, makeStyles } from '@material-ui/core/styles';
+import Helmet from 'react-helmet';
 
 import Info from './Info';
 
@@ -36,6 +37,7 @@ const Titles: React.FC<Props> = ({intl}) => {
 
   return (
     <Grid item={true} className={classes.root}>
+      <Helmet title={fullName}/>
       <Typography variant="h4" className={classes.name}>
         {fullName}
       </Typography>

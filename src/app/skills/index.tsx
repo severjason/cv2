@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import SkillIcon from '@material-ui/icons/Keyboard';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
@@ -12,7 +12,7 @@ import data from '../../data';
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    width: '100%',
+    flex: 1,
     padding: theme.spacing(2),
   },
 }));
@@ -24,7 +24,7 @@ const Skills: React.FC<InjectedIntlProps> = ({intl}) => {
   const skillsData = data[intl.locale] && data[intl.locale].skills;
 
   return (
-    <Grid container={true}>
+    <React.Fragment>
       <Title icon={SkillIcon} text={intl.messages['cv.skills.title']}/>
       <Paper className={classes.paper}>
         {skillsData && skillsData.map((skill: SkillsData) => (
@@ -35,7 +35,7 @@ const Skills: React.FC<InjectedIntlProps> = ({intl}) => {
           />
         ))}
       </Paper>
-    </Grid>
+    </React.Fragment>
   );
 };
 

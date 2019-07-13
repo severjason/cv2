@@ -12,9 +12,14 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
   },
   container: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(1, 1, 0, 1),
+    '&:last-child': {
+      padding: theme.spacing(0, 1, 1, 1)
+    },
   },
   item: {
+    display: 'flex',
+    flexDirection: 'column',
     padding: theme.spacing(1),
   },
 }));

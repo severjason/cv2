@@ -58,7 +58,7 @@ const Info: React.FC = () => {
 
   return (
     <Grid container={true} className={classes.root}>
-      <Item icon={<CakeIcon/>} title={moment(data.dateOfBirth, DEFAULT_DATE_FORMAT).format('ll')}/>
+      <Item icon={<CakeIcon/>} title={moment(data.dateOfBirth, DEFAULT_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)}/>
       <Item
         icon={<PhoneIcon/>}
         title={
