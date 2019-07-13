@@ -110,7 +110,10 @@ const en: CVData = {
     {
       title: 'Development tools',
       list: [
-        {name: 'WebStorm'},
+        {
+          name: 'WebStorm',
+          important: true,
+        },
       ]
     },
     {
@@ -158,7 +161,7 @@ const en: CVData = {
       startDate: '2005',
       endDate: '2009',
       company: 'Zaporizhzhian National Technical University',
-      role: 'Finance',
+      role: 'Finance and Credit',
     },
     {
       startDate: '2004',
@@ -172,67 +175,173 @@ const en: CVData = {
 const ua: CVData = {
   experience: [
     {
-      startDate: 'Май 2018',
-      endDate: 'наст. время',
+      startDate: 'Травень 2018',
+      endDate: 'теп. час',
       company: 'LightIT',
       role: 'Front-End Розробник',
       link: 'https://light-it.net/',
-      list: [],
+      list: [
+        {
+          text: 'Розробка UI для проекту фінансової установи, ' +
+            'що спеціалізується на короткостроковому високоризиковому кредитуванні. ' +
+            'Технології - Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
+        },
+        {
+          text: 'Проект для аналізу новин по кріптовалютам. ' +
+            'Впроваджено новий дизайн та перебудовано з SPA на SSR+PWA. ' +
+            'Технології - React, Redux, Next.js, Styled-components, Semantic-UI, Highcharts, Jest + enzyme.',
+          link: 'https://hypeanalysis.com/',
+        },
+        {
+          text: 'Різні короткострокові проекти.'
+        },
+        {
+          text: 'Приймав участь в курсах LightIT Frontend Labs як один із спікеров.',
+        },
+        {
+          text: 'Код ревью та навчання стажерів, проведення інтерв\'ю.'
+        }
+      ],
     },
     {
-      startDate: 'Август 2018',
-      endDate: 'Апрель 2019',
+      startDate: 'Серпень 2018',
+      endDate: 'Квітень 2019',
       company: 'Upwork',
       role: 'Front-End Розробник',
       link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
-      list: [],
-    }
+      list: [
+        {
+          text: 'localinsights.io - довгостроковий член команди проекту на Next.js/Material, ' +
+            'Я був відповідальний за додавання нових функцій, оновлення дизайну, ' +
+            'виправлення багів, рефакторинг коду. ' +
+            'Технології - React, Redux, Next.js, Material-UI, firebase.',
+          link: 'https://localinsights.io/',
+        }
+      ],
+    },
+    {
+      startDate: 'Серпень 2014',
+      endDate: 'Лютий 2015',
+      company: 'oDesk',
+      role: 'PHP/JS Розробник',
+      list: [
+        {
+          text: 'Короткострокові проекти.',
+        }
+      ],
+    },
   ],
   skills: [
     {
-      title: 'Основные',
+      title: 'Мови програмування',
+      list: [
+        {
+          name: 'JavaScript (ES6)',
+          important: true,
+        },
+        {
+          name: 'Typescript',
+          important: true,
+        },
+      ]
+    },
+    {
+      title: 'Технології',
       list: [
         {
           name: 'React',
           important: true,
         },
         {
-          name: 'Typescript',
-        }]
-    }
+          name: 'Redux',
+          important: true,
+        },
+        {
+          name: 'Material-UI',
+          important: true,
+        },
+        {name: 'SSR (Next.js)'},
+        {name: 'Jest + enzyme'},
+        {name: 'AWS-Amplify'},
+        {name: 'Semantic-UI'},
+        {name: 'Highcharts'},
+        {name: 'Bootstrap'},
+        {name: 'Функціональне програмування'},
+      ]
+    },
+    {
+      title: 'Веб-технології',
+      list: [
+        {name: 'HTML'},
+        {name: 'CSS'},
+        {name: 'PWA'},
+        {name: 'Firebase'},
+        {name: 'SVG'},
+        {name: 'SCSS'},
+        {name: 'Styled-components'},
+      ]
+    },
+    {
+      title: 'Засоби розробки',
+      list: [
+        {
+          name: 'WebStorm',
+          important: true,
+        },
+      ]
+    },
+    {
+      title: 'Операційні системи',
+      list: [
+        {name: 'Linux (Ubuntu)'},
+        {name: 'Windows'},
+      ]
+    },
+    {
+      title: 'Інше',
+      list: [
+        {name: 'git'},
+        {name: 'CRA'},
+        {name: 'Webpack'},
+        {name: 'CI/CD'},
+        {name: 'lodash'},
+        {name: 'Docker (базовий рівень)'},
+        {name: 'SEO (базовий рівень)'},
+      ]
+    },
   ],
   langs: [
     {
-      title: 'English',
-      level: 'Upper-intermediate'
+      title: 'Англійська',
+      level: 'Вище середнього'
     },
     {
-      title: 'Ukrainian',
-      level: 'Native'
+      title: 'Українська',
+      level: 'Рідний'
     },
     {
-      title: 'Russian',
-      level: 'Native'
+      title: 'Російський',
+      level: 'Рідний'
     }
   ],
   education: [
     {
       startDate: '2016',
       endDate: '2017',
-      company: 'Brain Academy, Запо',
-      role: 'Web Розробка',
+      company: 'Brain Academy, Запоріжжя',
+      role: 'Веб Розробка',
     },
     {
       startDate: '2005',
       endDate: '2009',
-      company: 'Запорожский национальный технический университет',
-      role: 'Финансы и кредит',
+      company: 'Запорізький Національний Технічний Університет',
+      role: 'Фінанси та кредит',
     },
     {
       startDate: '2004',
       endDate: '2009',
-      company: 'Запорожский национальный технический университет',
-      role: 'Технология строения авиационных двигателей',
+      company: 'Запорізький Національний Технічний Університет',
+      role: 'Технологія будування авіаційних двигунів',
     }
   ],
 };

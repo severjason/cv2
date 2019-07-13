@@ -1,25 +1,25 @@
 {
-  "cv.firstName": "Сергей",
+  "cv.firstName": "Сергій",
   "cv.lastName": "Северинов",
-  "cv.title": "Front-End Разработчик",
-  "cv.langSwitch": "Переключиться на английский",
-  "cv.at": "в",
+  "cv.title": "Front-End Розробник",
+  "cv.langSwitch": "Перейти на англійську",
+  "cv.at": "у",
   "cv.social": {
-    "github": "Мой GitHub",
-    "linkedIn": "Мой LinkedIn",
-    "facebook": "Мой Facebook",
-    "website": "Мой сайт"
+    "github": "Мій GitHub",
+    "linkedIn": "Мій LinkedIn",
+    "facebook": "Мій Facebook",
+    "website": "Мій сайт"
   },
   "cv.experience": {
-    "title": "Опыт"
+    "title": "Досвід"
   },
   "cv.skills": {
-    "title": "Навыки"
+    "title": "Навички"
   },
   "cv.langs": {
-    "title": "Языки"
+    "title": "Мови"
   },
   "cv.education": {
-    "title": "Образование"
+    "title": "Освіта"
   }
 }
