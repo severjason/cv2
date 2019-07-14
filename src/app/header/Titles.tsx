@@ -37,7 +37,10 @@ const Titles: React.FC<Props> = ({intl}) => {
 
   return (
     <Grid item={true} className={classes.root}>
-      <Helmet title={fullName}/>
+      <Helmet >
+        <title>{`${fullName} | ${intl.messages['cv.title']} (React)`}</title>
+        <meta name="description" content={`${fullName} | ${intl.messages['cv.title']} (React)`} />
+      </Helmet>
       <Typography variant="h4" className={classes.name}>
         {fullName}
       </Typography>
