@@ -4,6 +4,8 @@ jobs:
     docker:
       - image: circleci/node:8
     steps:
+      - add_ssh_keys:
+          fingerprints: "MD5:42:8c:0e:d9:ed:0a:2f:c7:d5:6c:48:0f:c6:e1:66:db"
       - checkout
       - restore_cache: # special step to restore the dependency cache
           key: dependency-cache-{{ checksum "package.json" }}
