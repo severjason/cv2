@@ -12,3 +12,8 @@ jobs:
       - run:
           name: Setup Dependencies
           command: npm install
+  deployment:
+    dev:
+      branch: master
+      commands:
+        - ssh jswebdev@jswebdev.ftp.tools 'cd /www && git pull origin master'
