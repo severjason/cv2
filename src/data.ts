@@ -62,7 +62,7 @@ const en: CVData = {
       title: 'Programming languages',
       list: [
         {
-          name: 'JavaScript (ES6)',
+          name: 'JavaScript',
           important: true,
         },
         {
@@ -93,6 +93,8 @@ const en: CVData = {
         {name: 'Highcharts'},
         {name: 'Bootstrap'},
         {name: 'Functional programming'},
+        {name: 'GraphQL'},
+        {name: 'Apollo'},
       ]
     },
     {
@@ -102,7 +104,6 @@ const en: CVData = {
         {name: 'CSS'},
         {name: 'PWA'},
         {name: 'Firebase'},
-        {name: 'SVG'},
         {name: 'SCSS'},
         {name: 'Styled-components'},
       ]
@@ -236,7 +237,7 @@ const ua: CVData = {
       title: 'Мови програмування',
       list: [
         {
-          name: 'JavaScript (ES6)',
+          name: 'JavaScript',
           important: true,
         },
         {
@@ -267,6 +268,8 @@ const ua: CVData = {
         {name: 'Highcharts'},
         {name: 'Bootstrap'},
         {name: 'Функціональне програмування'},
+        {name: 'GraphQL'},
+        {name: 'Apollo'},
       ]
     },
     {
@@ -276,7 +279,6 @@ const ua: CVData = {
         {name: 'CSS'},
         {name: 'PWA'},
         {name: 'Firebase'},
-        {name: 'SVG'},
         {name: 'SCSS'},
         {name: 'Styled-components'},
       ]
