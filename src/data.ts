@@ -1,4 +1,4 @@
-import { CVData } from './app/interfaces';
+import { CVData } from './app/types';
 
 const en: CVData = {
   experience: [

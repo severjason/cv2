@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 
-import { SkillsData } from '../interfaces';
+import { SkillsData } from '../types';
 
 const useStyles = makeStyles(theme => ({
   root: {

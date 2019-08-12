@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { Title } from '../shared';
 import Item from './Item';
-import { LangItem } from '../interfaces';
+import { LangItem } from '../types';
 import data from '../../data';
 
 const useStyles = makeStyles(theme => ({

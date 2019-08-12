@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import { LangItem } from '../interfaces';
+import { LangItem } from '../types';
 
 const useStyles = makeStyles(theme => ({
   root: {

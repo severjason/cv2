@@ -1,44 +1,44 @@
-export interface CVData {
+export type CVData = {
   experience: ExperienceItem[];
   skills: SkillsData[];
   langs: LangItem[];
   education: EducationItem[];
-}
+};
 
-export interface ExperienceItem {
+export type ExperienceItem = {
   startDate: string;
   endDate: string;
   company: string;
   role: string;
   list: ListItem[];
   link?: string;
-}
+};
 
-export interface ListItem {
+export type ListItem = {
   text: string;
   technologies?: string;
   link?: string;
-}
+};
 
-export interface EducationItem {
+export type EducationItem = {
   startDate: string;
   endDate: string;
   company: string;
   role: string;
   addition?: string;
-}
+};
 
-export interface SkillsData {
+export type SkillsData = {
   title: string;
   list: SkillListItem[];
-}
+};
 
-export interface SkillListItem {
+export type SkillListItem = {
   name: string;
   important?: boolean;
-}
+};
 
-export interface LangItem {
+export type LangItem = {
   title: string;
   level: string;
-}
+};

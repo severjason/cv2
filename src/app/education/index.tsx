@@ -5,7 +5,7 @@ import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 import { Title } from '../shared';
 import Item from './Item';
-import { EducationItem } from '../interfaces';
+import { EducationItem } from '../types';
 import data from '../../data';
 
 const Education: React.FC<InjectedIntlProps> = ({intl}) => {

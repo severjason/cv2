@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CalendarIcon from '@material-ui/icons/DateRange';
 
-import { EducationItem } from '../interfaces';
+import { EducationItem } from '../types';
 
 const useStyles = makeStyles(theme => ({
   root: {

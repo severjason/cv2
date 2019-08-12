@@ -10,7 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CalendarIcon from '@material-ui/icons/DateRange';
 import OpenIcon from '@material-ui/icons/Launch';
 
-import { ExperienceItem } from '../interfaces';
+import { ExperienceItem } from '../types';
 import { ListIcon } from '../shared';
 
 const useStyles = makeStyles(theme => ({
