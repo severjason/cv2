@@ -21,12 +21,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const App: React.FC<{}> = () => {
+type Props = {
+  path?: string;
+  lang?: string;
+};
+
+const App: React.FC<Props> = ({lang}) => {
 
   const classes = useStyles();
 
   return (
-    <IntlWrapper>
+    <IntlWrapper lang={lang}>
       <Container className={classes.root}>
         <Header/>
         <Main/>

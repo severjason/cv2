@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import 'normalize.css';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { addLocaleData } from 'react-intl';
@@ -16,9 +15,7 @@ addLocaleData([...locale_en, ...locale_ua]);
 
 ReactDOM.render((
   <MuiThemeProvider theme={theme}>
-    <BrowserRouter>
       <Routes/>
-    </BrowserRouter>
   </MuiThemeProvider>
 ), document.getElementById('root'));
 

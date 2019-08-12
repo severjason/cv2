@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect, RouteComponentProps, withRouter } from 'react-router-dom';
+import { Redirect } from '@reach/router';
 import { IntlProvider } from 'react-intl';
 import { LANGS } from './constants';
 import { flattenMessages } from './utils';
 
-interface MatchParams {
-  lang: string;
-}
+type Props = {
+  lang?: string;
+};
 
-const IntlWrapper: React.FC<RouteComponentProps<MatchParams>> = ({children, match: {params}}) => {
+const IntlWrapper: React.FC<Props> = ({children, lang: pathLang}) => {
   const [lang, setLang] = useState(LANGS.en.lang);
 
   useEffect(() => {
-    if (params.lang) {
-      setLang(params.lang);
+    if (pathLang) {
+      setLang(pathLang);
     }
-  }, [params]);
+  }, [pathLang]);
+
   return LANGS[lang] ? (
     <IntlProvider locale={lang} messages={flattenMessages(LANGS[lang].messages)}>
       {children}
@@ -23,4 +24,4 @@ const IntlWrapper: React.FC<RouteComponentProps<MatchParams>> = ({children, matc
   ) : <Redirect to={`/${LANGS.en.lang}`}/>;
 };
 
-export default withRouter(IntlWrapper);
+export default IntlWrapper;
