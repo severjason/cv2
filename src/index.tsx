@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'normalize.css';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
 import { addLocaleData } from 'react-intl';
 import locale_en from 'react-intl/locale-data/en';
 import locale_ua from './locale/ua';
@@ -15,7 +15,9 @@ addLocaleData([...locale_en, ...locale_ua]);
 
 ReactDOM.render((
   <MuiThemeProvider theme={theme}>
+    <CssBaseline>
       <Routes/>
+    </CssBaseline>
   </MuiThemeProvider>
 ), document.getElementById('root'));
 
