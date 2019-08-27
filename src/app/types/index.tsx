@@ -16,6 +16,7 @@ export type ExperienceItem = {
 
 export type ListItem = {
   text: string;
+  title?: string;
   technologies?: string;
   link?: string;
 };

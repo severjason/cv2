@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
     paddingRight: theme.spacing(1),
   },
   icon: {
-    fontSize: 18,
     paddingRight: theme.spacing(1),
   },
   listItem: {
@@ -38,8 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-interface Props extends EducationItem {
-}
+type Props = EducationItem;
 
 const Item: React.FC<Props> = ({company, endDate, role, startDate, addition}) => {
 

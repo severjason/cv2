@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   itemRoot: {
     paddingTop: theme.spacing(0.5),
   },
+  iconDiv: {
+    display: 'flex',
+  },
   title: {
     paddingLeft: theme.spacing(1),
   },
@@ -42,7 +45,7 @@ const Item: React.FC<ItemProps> = ({title, icon}) => {
 
   return (
     <Grid container={true} className={classes.itemRoot} alignItems="center">
-      <Grid item={true}>
+      <Grid item={true} className={classes.iconDiv}>
         {icon}
       </Grid>
       <Grid item={true} className={classes.title}>

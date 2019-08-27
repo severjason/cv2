@@ -10,22 +10,33 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'Developing UI for a financial institution project specializing in short term high-risk lending. ' +
-            'Technologies - Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
+          title: 'ZukFinance',
+          text: 'financial institution project specializing in short term high-risk lending. ' +
+            'Responsible for UI development and future supporting. ',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.'
         },
         {
-          text: 'Cryptocurrency news analysis project. Implemented new design and rebuilt from SPA to SSR+PWA. ' +
-            'Technologies - React, Redux, Next.js, Styled-components, Semantic-UI, Highcharts, Jest + enzyme.',
+          title: 'ZukWidget',
+          text: 'form widget for Wordpress website. ',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form.'
+        },
+        {
+          title: 'Hype Analysis',
+          text: 'cryptocurrency news analysis project. ' +
+            'Implemented new design and rebuilt from SPA to SSR + PWA. ',
+          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js),' +
+            ' Styled-components, Semantic-UI, Highcharts, Jest, Enzyme.',
           link: 'https://hypeanalysis.com/',
         },
         {
           text: 'Different short-term projects.'
         },
         {
-          text: 'Taking part in LightIT Frontend Labs as one of speakers.',
+          title: 'LightIT Frontend Labs',
+          text: 'took part as one of speakers.',
         },
         {
-          text: 'Interns code review and training, conducting an interviews.'
+          text: 'Interns code review and training, interviews conducting.'
         }
       ],
     },
@@ -37,11 +48,25 @@ const en: CVData = {
       link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
       list: [
         {
-          text: 'localinsights.io - long term Next.js/Material design team member, ' +
+          title: 'Local Insights',
+          text: 'data provider focused on real time property records, building permits, tax assessments and more.' +
             'I was responsible for adding new features, design update, ' +
-            'bug fixing, code refactoring of existing application. ' +
-            'Technologies - React, Redux, Next.js, Material-UI, firebase.',
+            'bug fixing, code refactoring of existing application. ',
           link: 'https://localinsights.io/',
+          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js), Material-UI, Firebase.'
+        }
+      ],
+    },
+    {
+      startDate: 'April 2018',
+      endDate: 'May 2018',
+      company: 'CHP',
+      role: 'Front-End Developer',
+      list: [
+        {
+          text: 'Landing for local air conditioning company.',
+          link: 'https://chp.zp.ua/',
+          technologies: 'HTML5, CSS3, React, Redux, Typescript.'
         }
       ],
     },
@@ -100,8 +125,8 @@ const en: CVData = {
     {
       title: 'Web',
       list: [
-        {name: 'HTML'},
-        {name: 'CSS'},
+        {name: 'HTML5'},
+        {name: 'CSS3'},
         {name: 'PWA'},
         {name: 'Firebase'},
         {name: 'SCSS'},
@@ -140,7 +165,7 @@ const en: CVData = {
   langs: [
     {
       title: 'English',
-      level: 'Upper-intermediate'
+      level: 'Advanced'
     },
     {
       title: 'Ukrainian',
@@ -183,21 +208,31 @@ const ua: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'Розробка UI для проекту фінансової установи, ' +
+          title: 'ZukFinance',
+          text: 'проект фінансової установи, ' +
             'що спеціалізується на короткостроковому високоризиковому кредитуванні. ' +
-            'Технології - Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
+            'Відповідальний за розробку UI та подальшу підтримку.',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
         },
         {
-          text: 'Проект для аналізу новин по кріптовалютам. ' +
-            'Впроваджено новий дизайн та перебудовано з SPA на SSR+PWA. ' +
-            'Технології - React, Redux, Next.js, Styled-components, Semantic-UI, Highcharts, Jest + enzyme.',
+          title: 'ZukWidget',
+          text: 'форма-віджет для сайту на Wordpress. ',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form.'
+        },
+        {
+          title: 'Hype Analysis',
+          text: 'проект для аналізу новин по кріптовалютам. ' +
+            'Впроваджено новий дизайн та перебудовано з SPA на SSR + PWA. ',
+          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js),' +
+            ' Styled-components, Semantic-UI, Highcharts, Jest, Enzyme.',
           link: 'https://hypeanalysis.com/',
         },
         {
           text: 'Різні короткострокові проекти.'
         },
         {
-          text: 'Приймав участь в курсах LightIT Frontend Labs як один із спікеров.',
+          title: 'LightIT Frontend Labs',
+          text: 'Приймав участь в курсах як один із спікеров.',
         },
         {
           text: 'Код ревью та навчання стажерів, проведення інтерв\'ю.'
@@ -212,11 +247,26 @@ const ua: CVData = {
       link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
       list: [
         {
-          text: 'localinsights.io - довгостроковий член команди проекту на Next.js/Material, ' +
+          title: 'Local Insights',
+          text: 'провайдер даних зосереджений на обліку нерухомості в режимі реального часу, дозволах на будівництво,' +
+            ' податкових нарахувань та інше. ' +
             'Я був відповідальний за додавання нових функцій, оновлення дизайну, ' +
-            'виправлення багів, рефакторинг коду. ' +
-            'Технології - React, Redux, Next.js, Material-UI, firebase.',
+            'виправлення багів, рефакторинг коду.',
           link: 'https://localinsights.io/',
+          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js), Material-UI, Firebase.'
+        }
+      ],
+    },
+    {
+      startDate: 'Квітень 2018',
+      endDate: 'Травень 2018',
+      company: 'CHP',
+      role: 'Front-End Розробник',
+      list: [
+        {
+          text: 'Лендінг для локальної компанії з продажу кондиціонерів.',
+          link: 'https://chp.zp.ua/',
+          technologies: 'HTML5, CSS3, React, Redux, Typescript.'
         }
       ],
     },
@@ -275,8 +325,8 @@ const ua: CVData = {
     {
       title: 'Веб-технології',
       list: [
-        {name: 'HTML'},
-        {name: 'CSS'},
+        {name: 'HTML5'},
+        {name: 'CSS3'},
         {name: 'PWA'},
         {name: 'Firebase'},
         {name: 'SCSS'},
@@ -315,7 +365,7 @@ const ua: CVData = {
   langs: [
     {
       title: 'Англійська',
-      level: 'Вище середнього'
+      level: 'Передовий'
     },
     {
       title: 'Українська',

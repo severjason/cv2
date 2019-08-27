@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    paddingBottom: theme.spacing(2),
+    padding: theme.spacing(2, 0),
   },
   icon: {
     marginRight: theme.spacing(2),

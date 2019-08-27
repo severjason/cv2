@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   item: {
     display: 'flex',
     flexDirection: 'column',
-    padding: theme.spacing(1),
+    padding: theme.spacing(0, 1),
   },
 }));
 
@@ -31,18 +31,14 @@ const Main: React.FC = () => {
   return (
     <Grid className={classes.root}>
       <Grid container={true} className={classes.container}>
-        <Grid item={true} xs={12} sm={7} className={classes.item}>
+        <Grid item={true} xs={12} sm={12} md={7} className={classes.item}>
           <Experience/>
         </Grid>
-        <Grid item={true} xs={12} sm={5} className={classes.item}>
+        <Grid item={true} xs={12} sm={12} md={5} className={classes.item}>
           <Skills/>
-        </Grid>
-      </Grid>
-      <Grid container={true} className={classes.container}>
-        <Grid item={true} xs={12} sm={7} className={classes.item}>
           <Education/>
         </Grid>
-        <Grid item={true} xs={12} sm={5} className={classes.item}>
+        <Grid item={true} xs={12} sm={12} md={12} className={classes.item}>
           <Langs/>
         </Grid>
       </Grid>

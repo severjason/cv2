@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import CalendarIcon from '@material-ui/icons/DateRange';
 import OpenIcon from '@material-ui/icons/Launch';
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 import { ExperienceItem } from '../types';
 import { ListIcon } from '../shared';
@@ -38,7 +39,6 @@ const useStyles = makeStyles(theme => ({
     paddingRight: theme.spacing(1),
   },
   icon: {
-    fontSize: 18,
     paddingRight: theme.spacing(1),
   },
   iconButton: {
@@ -50,12 +50,17 @@ const useStyles = makeStyles(theme => ({
   visit: {
     fontSize: 16,
   },
+  title: {
+    fontWeight: 600,
+  },
+  technologies: {
+    fontStyle: 'italic',
+  },
 }));
 
-interface Props extends ExperienceItem {
-}
+type Props = ExperienceItem & InjectedIntlProps;
 
-const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) => {
+const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link, intl}) => {
 
   const classes = useStyles();
 
@@ -77,6 +82,7 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
               rel="noopener noreferrer"
               href={link}
               className={classes.iconButton}
+              title={intl.messages['cv.visit']}
             >
               <OpenIcon className={classes.visit}/>
             </IconButton>
@@ -94,8 +100,18 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
         <List disablePadding={true}>
           {list.map(item => (
             <ListItem key={item.text} className={classes.listItem}>
-              <ListIcon/>
+              {list.length > 1 && (
+                <ListIcon/>
+              )}
               <ListItemText>
+                {item.title && (
+                  <span>
+                    <span className={classes.title}>
+                      {item.title}
+                    </span>
+                    {` - `}
+                  </span>
+                )}
                 {item.text}
                 {item.link && (
                   <IconButton
@@ -104,13 +120,16 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
                     rel="noopener noreferrer"
                     href={item.link}
                     className={classes.iconButton}
+                    title={intl.messages['cv.visit']}
                   >
                     <OpenIcon className={classes.visit}/>
                   </IconButton>
                 )}
                 <br/>
                 {item.technologies && (
-                  `Technologies: ${item.technologies}.`
+                  <span className={classes.technologies}>
+                    {item.technologies}
+                  </span>
                 )}
               </ListItemText>
             </ListItem>
@@ -121,4 +140,4 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link}) 
   );
 };
 
-export default Item;
+export default injectIntl(Item);
