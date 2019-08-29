@@ -46,6 +46,6 @@
     "@types/react-intl": "^2.3.18",
     "tslint": "^5.19.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.2"
   }
 }
