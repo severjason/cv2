@@ -3,9 +3,6 @@ import Grid from '@material-ui/core/Grid';
 import CakeIcon from '@material-ui/icons/Cake';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
-/*
-import PublicIcon from '@material-ui/icons/Public';
-*/
 import { makeStyles } from '@material-ui/core/styles';
 import moment from 'moment';
 
@@ -34,10 +31,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-interface ItemProps {
+type ItemProps = {
   title: string | ReactElement;
   icon: ReactElement;
-}
+};
 
 const Item: React.FC<ItemProps> = ({title, icon}) => {
 
@@ -55,7 +52,7 @@ const Item: React.FC<ItemProps> = ({title, icon}) => {
   );
 };
 
-const Info: React.FC = () => {
+const Info = () => {
 
   const classes = useStyles();
 
@@ -65,12 +62,7 @@ const Info: React.FC = () => {
       <Item
         icon={<PhoneIcon/>}
         title={
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.link}
-            href={`tel:${data.phone}`}
-          >
+          <a target="_blank" rel="noopener noreferrer" className={classes.link} href={`tel:${data.phone}`}>
             {data.phone}
           </a>
         }
@@ -78,20 +70,11 @@ const Info: React.FC = () => {
       <Item
         icon={<EmailIcon/>}
         title={
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.link}
-            href={`mailto:${data.email}`}
-          >
+          <a target="_blank" rel="noopener noreferrer" className={classes.link} href={`mailto:${data.email}`}>
             {data.email}
           </a>
         }
       />
-{/*      <Item
-        icon={<PublicIcon/>}
-        title={<a className={classes.link} href={data.website}>{data.website.split('//').pop()}</a>}
-      />*/}
     </Grid>
   );
 };

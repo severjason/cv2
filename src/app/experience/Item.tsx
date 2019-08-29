@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import CalendarIcon from '@material-ui/icons/DateRange';
 import OpenIcon from '@material-ui/icons/Launch';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 import { ExperienceItem } from '../types';
 import { ListIcon } from '../shared';
@@ -58,9 +58,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-type Props = ExperienceItem & InjectedIntlProps;
+const Item: React.FC<ExperienceItem> = ({company, endDate, role, startDate, list, link}) => {
 
-const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link, intl}) => {
+  const intl = useIntl();
 
   const classes = useStyles();
 
@@ -82,7 +82,7 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link, i
               rel="noopener noreferrer"
               href={link}
               className={classes.iconButton}
-              title={intl.messages['cv.visit']}
+              title={`${intl.messages['cv.visit']}`}
             >
               <OpenIcon className={classes.visit}/>
             </IconButton>
@@ -120,7 +120,7 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link, i
                     rel="noopener noreferrer"
                     href={item.link}
                     className={classes.iconButton}
-                    title={intl.messages['cv.visit']}
+                    title={`${intl.messages['cv.visit']}`}
                   >
                     <OpenIcon className={classes.visit}/>
                   </IconButton>
@@ -140,4 +140,4 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, list, link, i
   );
 };
 
-export default injectIntl(Item);
+export default Item;

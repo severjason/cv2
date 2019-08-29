@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ListIcon: React.FC = () => {
+const ListIcon = () => {
 
   const classes = useStyles();
 

@@ -22,10 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-interface Props extends SkillsData {
-}
-
-const Item: React.FC<Props> = ({title, list}) => {
+const Item: React.FC<SkillsData> = ({title, list}) => {
 
   const classes = useStyles();
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
@@ -18,11 +18,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Socials: React.FC<InjectedIntlProps> = ({intl}) => {
+const Socials = () => {
+
+  const intl = useIntl();
 
   const classes = useStyles();
 
-  const getSocial = (value: string) => intl.messages[`cv.social.${value}`];
+  const getSocial = (value: string) => `${intl.messages[`cv.social.${value}`]}`;
 
   return (
     <Grid container={true} className={classes.root} justify="center">
@@ -39,4 +41,4 @@ const Socials: React.FC<InjectedIntlProps> = ({intl}) => {
   );
 };
 
-export default injectIntl(Socials);
+export default Socials;

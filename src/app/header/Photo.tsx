@@ -2,6 +2,7 @@ import React  from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+
 import { photo } from '../../data';
 
 const useStyles = makeStyles(theme => ({
@@ -24,17 +25,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Photo: React.FC<{}> = () => {
+const Photo = () => {
 
   const classes = useStyles();
 
   return (
     <Grid item={true} className={classes.root}>
-      <Avatar
-        className={classes.avatar}
-        component="div"
-        src={photo}
-      /></Grid>
+      <Avatar className={classes.avatar} component="div" src={photo}/>
+    </Grid>
   );
 };
 

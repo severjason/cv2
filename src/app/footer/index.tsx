@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,7 +14,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Footer: React.FC<InjectedIntlProps> = ({intl}) => {
+const Footer = () => {
+
+  const intl = useIntl();
 
   const classes = useStyles();
 
@@ -29,4 +31,4 @@ const Footer: React.FC<InjectedIntlProps> = ({intl}) => {
   );
 };
 
-export default injectIntl(Footer);
+export default Footer;

@@ -12,8 +12,9 @@ const IntlWrapper: React.FC<Props> = ({children, lang: pathLang}) => {
   const [lang, setLang] = useState(LANGS.en.lang);
 
   useEffect(() => {
-    if (pathLang) {
-      setLang(pathLang);
+    const langValue = Object.keys(LANGS).find(key => LANGS[key].route === pathLang);
+    if (langValue) {
+      setLang(langValue);
     }
   }, [pathLang]);
 
@@ -21,7 +22,7 @@ const IntlWrapper: React.FC<Props> = ({children, lang: pathLang}) => {
     <IntlProvider locale={lang} messages={flattenMessages(LANGS[lang].messages)}>
       {children}
     </IntlProvider>
-  ) : <Redirect to={`/${LANGS.en.lang}`}/>;
+  ) : <Redirect to={`/${LANGS.en.route}`}/>;
 };
 
 export default IntlWrapper;

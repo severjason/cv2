@@ -198,7 +198,7 @@ const en: CVData = {
   ],
 };
 
-const ua: CVData = {
+const uk: CVData = {
   experience: [
     {
       startDate: 'Травень 2018',
@@ -407,7 +407,7 @@ export default {
   facebook: 'https://www.facebook.com/severjason',
   linkedIn: 'https://www.linkedin.com/in/severjason',
   en,
-  ua,
+  uk,
 };
 
 // tslint:disable-next-line:max-line-length

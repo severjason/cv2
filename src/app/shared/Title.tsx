@@ -12,10 +12,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-interface OwnProps {
+type OwnProps = {
   icon: any;
   text: string;
-}
+};
 
 const Title: React.FC<OwnProps> = ({icon, text}) => {
 

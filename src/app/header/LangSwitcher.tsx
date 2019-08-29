@@ -1,12 +1,11 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from '@reach/router';
 
 import { LANGS } from '../../constants';
-import { UAflag, USflag } from '../icons';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,21 +16,20 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-interface Props extends  InjectedIntlProps {
-}
+const LangSwitcher = () => {
 
-const LangSwitcher: React.FC<Props> = ({intl}) => {
+  const intl = useIntl();
 
   const classes = useStyles();
 
-  const Icon = intl.locale === LANGS.en.lang ? USflag : UAflag;
+  const Icon = LANGS[intl.locale].flagIcon;
 
-  const link = intl.locale === LANGS.en.lang ? LANGS.ua.lang : LANGS.en.lang;
+  const link = LANGS[intl.locale].nextRoute;
 
   return (
     <Grid item={true} className={classes.root}>
       <Link to={`/${link}`}>
-        <IconButton title={intl.messages['cv.langSwitch']} href="">
+        <IconButton title={`${intl.messages['cv.langSwitch']}`}>
           <Icon/>
         </IconButton>
       </Link>
@@ -39,4 +37,4 @@ const LangSwitcher: React.FC<Props> = ({intl}) => {
   );
 };
 
-export default injectIntl(LangSwitcher);
+export default LangSwitcher;

@@ -20,10 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-interface Props extends LangItem {
-}
-
-const Item: React.FC<Props> = ({title, level}) => {
+const Item: React.FC<LangItem> = ({title, level}) => {
 
   const classes = useStyles();
 

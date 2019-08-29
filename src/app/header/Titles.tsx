@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
+import { useIntl } from 'react-intl';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -26,10 +26,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-interface Props extends  InjectedIntlProps {
-}
+const Titles = () => {
 
-const Titles: React.FC<Props> = ({intl}) => {
+  const intl = useIntl();
 
   const classes = useStyles();
 
@@ -53,4 +52,4 @@ const Titles: React.FC<Props> = ({intl}) => {
   );
 };
 
-export default injectIntl(Titles);
+export default Titles;
