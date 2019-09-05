@@ -1,4 +1,5 @@
 export type CVData = {
+  profile: string;
   experience: ExperienceItem[];
   skills: SkillsData[];
   langs: LangItem[];

@@ -1,6 +1,9 @@
 import { CVData } from './app/types';
 
 const en: CVData = {
+  profile: 'I am Front-End Developer who is able to create all variety of complexity websites and applications ' +
+    'that look beautiful and professional, are highly functional and load quickly' +
+    ' - from simple landing page to complex server side rendering progressive web application with offline support. ',
   experience: [
     {
       startDate: 'May 2018',
@@ -131,6 +134,7 @@ const en: CVData = {
         {name: 'Firebase'},
         {name: 'SCSS'},
         {name: 'Styled-components'},
+        {name: 'Responsive Web Design'},
       ]
     },
     {
@@ -199,6 +203,10 @@ const en: CVData = {
 };
 
 const uk: CVData = {
+  profile: 'Я Front-End Розробник, що може створити вебсайти та додатки різноманітної складності, які виглядають' +
+    ' гарно та професійно, є високофункціональними та швидкими ' +
+    'that look beautiful and professional, are highly functional and load quickly' +
+    ' - від простих лендінгів до комплексних PWA додатків з SSR та підтримкою оффлайн. ',
   experience: [
     {
       startDate: 'Травень 2018',
@@ -331,6 +339,7 @@ const uk: CVData = {
         {name: 'Firebase'},
         {name: 'SCSS'},
         {name: 'Styled-components'},
+        {name: 'Responsive Web Design'},
       ]
     },
     {

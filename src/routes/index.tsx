@@ -6,7 +6,7 @@ import { LANGS } from '../constants';
 
 const Routes: React.FC = () => (
   <Router>
-    <Redirect from="/" to={`/${LANGS.en.lang}`}/>
+    <Redirect noThrow={true} from="/" to={`/${LANGS.en.lang}`}/>
     <App path="/:lang"/>
   </Router>
 );
