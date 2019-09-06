@@ -134,7 +134,7 @@ const en: CVData = {
         {name: 'Firebase'},
         {name: 'SCSS'},
         {name: 'Styled-components'},
-        {name: 'Responsive Web Design'},
+        {name: 'Responsive Design'},
       ]
     },
     {
@@ -339,7 +339,7 @@ const uk: CVData = {
         {name: 'Firebase'},
         {name: 'SCSS'},
         {name: 'Styled-components'},
-        {name: 'Responsive Web Design'},
+        {name: 'Responsive Design'},
       ]
     },
     {
