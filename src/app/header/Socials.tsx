@@ -28,13 +28,31 @@ const Socials = () => {
 
   return (
     <Grid container={true} className={classes.root} justify="center">
-      <IconButton target="_blank" title={getSocial('github')} href={data.github} className={classes.button}>
+      <IconButton
+        rel="noreferrer noopener"
+        target="_blank"
+        title={getSocial('github')}
+        href={data.github}
+        className={classes.button}
+      >
         <GithubIcon/>
       </IconButton>
-      <IconButton target="_blank" title={getSocial('linkedIn')} href={data.linkedIn} className={classes.button}>
+      <IconButton
+        rel="noreferrer noopener"
+        target="_blank"
+        title={getSocial('linkedIn')}
+        href={data.linkedIn}
+        className={classes.button}
+      >
         <LinkedinIcon/>
       </IconButton>
-      <IconButton target="_blank" title={getSocial('facebook')} href={data.facebook} className={classes.button}>
+      <IconButton
+        rel="noreferrer noopener"
+        target="_blank"
+        title={getSocial('facebook')}
+        href={data.facebook}
+        className={classes.button}
+      >
         <Facebook/>
       </IconButton>
     </Grid>
