@@ -44,6 +44,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-helmet": "^5.0.9",
     "@types/react-intl": "^3.0.0",
+    "firebase-tools": "^7.3.1",
     "tslint": "^5.19.0",
     "tslint-react": "^4.0.0",
     "typescript": "^3.6.2"
