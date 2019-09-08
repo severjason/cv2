@@ -1,8 +1,7 @@
 import { CVData } from './app/types';
 
 const en: CVData = {
-  profile: 'I am Front-End Developer who is able to create all variety of complexity websites and applications ' +
-    'that look beautiful and professional, are highly functional and load quickly' +
+  profile: 'I am Front-End Developer who is able to create all variety of websites and applications ' +
     ' - from simple landing page to complex server side rendering progressive web application with offline support. ',
   experience: [
     {
@@ -203,9 +202,7 @@ const en: CVData = {
 };
 
 const uk: CVData = {
-  profile: 'Я Front-End Розробник, що може створити вебсайти та додатки різноманітної складності, які виглядають' +
-    ' гарно та професійно, є високофункціональними та швидкими ' +
-    'that look beautiful and professional, are highly functional and load quickly' +
+  profile: 'Я Front-End Розробник, що може створити вебсайти та додатки різноманітної складності' +
     ' - від простих лендінгів до комплексних PWA додатків з SSR та підтримкою оффлайн. ',
   experience: [
     {
