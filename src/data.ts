@@ -12,6 +12,11 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
+          text: 'Trip related project with firestore database. ' +
+            'Responsible for UI development. ',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.'
+        },
+        {
           title: 'ZukFinance',
           text: 'financial institution project specializing in short term high-risk lending. ' +
             'Responsible for UI development and future supporting. ',
@@ -212,6 +217,11 @@ const uk: CVData = {
       role: 'Front-End Розробник',
       link: 'https://light-it.net/',
       list: [
+        {
+          text: 'Проект, пов\'язаний з поїздками та використанням бази данних firestore. ' +
+            'Відповідальний за розробку UI. ',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.'
+        },
         {
           title: 'ZukFinance',
           text: 'проект фінансової установи, ' +
