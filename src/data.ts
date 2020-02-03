@@ -12,9 +12,17 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
+          title: 'TripPlan landing',
+          text: 'Landing website for TripPlan.com',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Next.js, Material-UI.',
+          link: 'https://web.tripplan.com',
+        },
+        {
+          title: 'TripPlan',
           text: 'Trip related project with firestore database. ' +
             'Responsible for UI development. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.'
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.',
+          link: 'https://dev.tripplan.com',
         },
         {
           title: 'ZukFinance',
@@ -218,9 +226,17 @@ const uk: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
+          title: 'TripPlan лендінг',
+          text: 'Лендінг сторінка для TripPlan.com',
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Next.js, Material-UI.',
+          link: 'https://web.tripplan.com',
+        },
+        {
+          title: 'TripPlan',
           text: 'Проект, пов\'язаний з поїздками та використанням бази данних firestore. ' +
             'Відповідальний за розробку UI. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.'
+          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.',
+          link: 'https://dev.tripplan.com',
         },
         {
           title: 'ZukFinance',
