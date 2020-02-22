@@ -12,36 +12,28 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          title: 'TripPlan landing',
-          text: 'Landing website for TripPlan.com',
+          text: 'Landing website for trip related project',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Next.js, Material-UI.',
-          link: 'https://web.tripplan.com',
         },
         {
-          title: 'TripPlan',
           text: 'Trip related project with firestore database. ' +
             'Responsible for UI development. ',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.',
-          link: 'https://dev.tripplan.com',
         },
         {
-          title: 'ZukFinance',
-          text: 'financial institution project specializing in short term high-risk lending. ' +
+          text: 'Financial institution project specializing in short term high-risk lending. ' +
             'Responsible for UI development and future supporting. ',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.'
         },
         {
-          title: 'ZukWidget',
-          text: 'form widget for Wordpress website. ',
+          text: 'Form widget for Wordpress website. ',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form.'
         },
         {
-          title: 'Hype Analysis',
-          text: 'cryptocurrency news analysis project. ' +
+          text: 'Cryptocurrency news analysis project. ' +
             'Implemented new design and rebuilt from SPA to SSR + PWA. ',
           technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js),' +
             ' Styled-components, Semantic-UI, Highcharts, Jest, Enzyme.',
-          link: 'https://hypeanalysis.com/',
         },
         {
           text: 'Different short-term projects.'
@@ -226,37 +218,29 @@ const uk: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          title: 'TripPlan лендінг',
-          text: 'Лендінг сторінка для TripPlan.com',
+          text: 'Лендінг сторінка для проекту, пов\'язаному з подорожами',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Next.js, Material-UI.',
-          link: 'https://web.tripplan.com',
         },
         {
-          title: 'TripPlan',
-          text: 'Проект, пов\'язаний з поїздками та використанням бази данних firestore. ' +
+          text: 'Проект, пов\'язаний з подорожами та використанням бази данних firestore. ' +
             'Відповідальний за розробку UI. ',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.',
-          link: 'https://dev.tripplan.com',
         },
         {
-          title: 'ZukFinance',
-          text: 'проект фінансової установи, ' +
+          text: 'Проект фінансової установи, ' +
             'що спеціалізується на короткостроковому високоризиковому кредитуванні. ' +
             'Відповідальний за розробку UI та подальшу підтримку.',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
         },
         {
-          title: 'ZukWidget',
-          text: 'форма-віджет для сайту на Wordpress. ',
+          text: 'Форма-віджет для сайту на Wordpress. ',
           technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form.'
         },
         {
-          title: 'Hype Analysis',
-          text: 'проект для аналізу новин по кріптовалютам. ' +
+          text: 'Проект для аналізу новин по кріптовалютам. ' +
             'Впроваджено новий дизайн та перебудовано з SPA на SSR + PWA. ',
           technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js),' +
             ' Styled-components, Semantic-UI, Highcharts, Jest, Enzyme.',
-          link: 'https://hypeanalysis.com/',
         },
         {
           text: 'Різні короткострокові проекти.'
