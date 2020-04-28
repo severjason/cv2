@@ -6,6 +6,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import data from '../../data';
+import { useLang } from '../../hooks';
 import { Title } from '../shared';
 
 const useStyles = makeStyles(theme => ({
@@ -18,9 +19,11 @@ const useStyles = makeStyles(theme => ({
 
 const Profile = () => {
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
 
-  const profileData = data[i18n.language] && data[i18n.language].profile;
+  const {currentLang} = useLang();
+
+  const profileData = data[currentLang] && data[currentLang].profile;
 
   const classes = useStyles();
 

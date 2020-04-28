@@ -1,11 +1,12 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from '@reach/router';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { LANGS } from '../../constants';
+import { useLang } from '../../hooks';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,13 +19,15 @@ const useStyles = makeStyles(theme => ({
 
 const LangSwitcher = () => {
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
+
+  const {currentLang} = useLang();
 
   const classes = useStyles();
 
-  const Icon = LANGS[i18n.language].flagIcon;
+  const Icon = LANGS[currentLang].flagIcon;
 
-  const link = LANGS[i18n.language].nextRoute;
+  const link = LANGS[currentLang].nextRoute;
 
   return (
     <Grid item className={classes.root}>

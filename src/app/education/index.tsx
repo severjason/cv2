@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import SchoolIcon from '@material-ui/icons/School';
 import { useTranslation } from 'react-i18next';
+import { useLang } from '../../hooks';
 
 import { Title } from '../shared';
 import Item from './Item';
@@ -10,9 +11,11 @@ import data from '../../data';
 
 const Education = () => {
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
 
-  const educationData = data[i18n.language] && data[i18n.language].education;
+  const {currentLang} = useLang();
+
+  const educationData = data[currentLang] && data[currentLang].education;
 
   return (
     <Grid container>

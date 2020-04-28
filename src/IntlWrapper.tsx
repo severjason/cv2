@@ -1,7 +1,9 @@
 import { Redirect } from '@reach/router';
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
+
 import { LANGS } from './constants';
+import { LangContext } from './context/lang';
 
 type OwnProps = {
   lang?: string;
@@ -20,9 +22,9 @@ const IntlWrapper: React.FC<Props> = ({children, lang: pathLang, i18n}) => {
   }, [pathLang, i18n]);
 
   return LANGS[lang] ? (
-    <Fragment>
+    <LangContext.Provider value={lang}>
       {children}
-    </Fragment>
+    </LangContext.Provider>
   ) : <Redirect to={`/${LANGS.en.route}`}/>;
 };
 

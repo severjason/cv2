@@ -424,7 +424,7 @@ export default {
   phone: '+38 (050) 543-60-17',
   email: 'severynov.sergii@gmail.com',
   github: 'https://github.com/severjason',
-  website: 'https://sergii.severynov.com',
+  website: 'https://sergii.severynov.com/en',
   facebook: 'https://www.facebook.com/severjason',
   linkedIn: 'https://www.linkedin.com/in/severjason',
   en,

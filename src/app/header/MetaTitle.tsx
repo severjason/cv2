@@ -2,10 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import data, { photo } from '../../data';
+import { useLang } from '../../hooks';
 
 const MetaTitle = () => {
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
+
+  const {currentLang} = useLang();
 
   const fullName = `${t('firstName')} ${t('lastName')}`;
 
@@ -13,7 +16,7 @@ const MetaTitle = () => {
 
   const title = `${fullName} | ${t('title')} ${framework}`;
 
-  const description = data[i18n.language].profile;
+  const description = data[currentLang].profile;
 
   return (
     <Helmet>

@@ -4,15 +4,18 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import data from '../../data';
+import { useLang } from '../../hooks';
 import { Title } from '../shared';
 import { ExperienceItem } from '../types';
 import Item from './Item';
 
 const Experience = () => {
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
 
-  const expData = data[i18n.language] && data[i18n.language].experience;
+  const {currentLang} = useLang();
+
+  const expData = data[currentLang] && data[currentLang].experience;
 
   return (
     <Grid container>

@@ -6,6 +6,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import data from '../../data';
+import { useLang } from '../../hooks';
 import { Title } from '../shared';
 import { LangItem } from '../types';
 import Item from './Item';
@@ -20,11 +21,13 @@ const useStyles = makeStyles(theme => ({
 
 const Langs = () => {
 
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
+
+  const {currentLang} = useLang();
 
   const classes = useStyles();
 
-  const langData = data[i18n.language] && data[i18n.language].langs;
+  const langData = data[currentLang] && data[currentLang].langs;
 
   return (
     <Grid container>
