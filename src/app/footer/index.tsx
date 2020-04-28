@@ -1,8 +1,8 @@
-import React from 'react';
-import { useIntl } from 'react-intl';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,14 +16,14 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = () => {
 
-  const intl = useIntl();
+  const {t} = useTranslation();
 
   const classes = useStyles();
 
-  const fullName = `${intl.messages['cv.firstName']} ${intl.messages['cv.lastName']}`;
+  const fullName = `${t('firstName')} ${t('lastName')}`;
 
   return (
-    <Grid container={true} className={classes.root} justify="center" alignItems="center">
+    <Grid container className={classes.root} justify="center" alignItems="center">
       <Typography className={classes.text}>
         {`${fullName} @ ${new Date().getFullYear()}`}
       </Typography>

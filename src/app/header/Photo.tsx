@@ -1,7 +1,7 @@
-import React  from 'react';
+import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
+import React from 'react';
 
 import { photo } from '../../data';
 
@@ -30,7 +30,7 @@ const Photo = () => {
   const classes = useStyles();
 
   return (
-    <Grid item={true} className={classes.root}>
+    <Grid item className={classes.root}>
       <Avatar className={classes.avatar} component="div" src={photo}/>
     </Grid>
   );

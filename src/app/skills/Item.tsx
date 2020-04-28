@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 
-import { SkillsData } from '../types';
+import type { SkillsData } from '../types';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,8 +27,8 @@ const Item: React.FC<SkillsData> = ({title, list}) => {
   const classes = useStyles();
 
   return (
-    <Grid container={true} direction="column" className={classes.root}>
-      <Grid container={true} alignItems="center">
+    <Grid container direction="column" className={classes.root}>
+      <Grid container alignItems="center">
         <Typography variant="body2" className={classes.title}>
           {title}:
         </Typography>

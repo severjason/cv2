@@ -1,12 +1,12 @@
-import React from 'react';
-import { useIntl } from 'react-intl';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import Helmet from 'react-helmet';
+import Typography from '@material-ui/core/Typography';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Info from './Info';
+import MetaTitle from './MetaTitle';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,23 +28,20 @@ const useStyles = makeStyles(theme => ({
 
 const Titles = () => {
 
-  const intl = useIntl();
+  const {t} = useTranslation();
 
   const classes = useStyles();
 
-  const fullName = `${intl.messages['cv.firstName']} ${intl.messages['cv.lastName']}`;
+  const fullName = `${t('firstName')} ${t('lastName')}`;
 
   return (
-    <Grid item={true} className={classes.root}>
-      <Helmet >
-        <title>{`${fullName} | ${intl.messages['cv.title']} (React)`}</title>
-        <meta name="description" content={`${fullName} | ${intl.messages['cv.title']} (React)`} />
-      </Helmet>
+    <Grid item className={classes.root}>
+      <MetaTitle/>
       <Typography variant="h4" className={classes.name}>
         {fullName}
       </Typography>
       <Typography variant="h5" className={classes.title}>
-        {intl.messages['cv.title']}
+        {t('title')}
       </Typography>
       <Divider component="hr" className={classes.divider}/>
       <Info/>

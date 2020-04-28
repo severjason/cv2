@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -23,7 +23,7 @@ const Header = () => {
     <div>
       <Grid className={classes.root}>
         <LangSwitcher/>
-        <Grid container={true}>
+        <Grid container>
           <Photo/>
           <Titles/>
         </Grid>

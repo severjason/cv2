@@ -1,27 +1,27 @@
 {
-  "cv.firstName": "Sergii",
-  "cv.lastName": "Severynov",
-  "cv.title": "Front-End Developer",
-  "cv.langSwitch": "Switch to Ukrainian",
-  "cv.at": "at",
-  "cv.visit": "Visit",
-  "cv.profile": "Profile",
-  "cv.social": {
+  "firstName": "Sergii",
+  "lastName": "Severynov",
+  "title": "Front-End Developer",
+  "langSwitch": "Switch to Ukrainian",
+  "at": "at",
+  "visit": "Visit",
+  "profile": "Profile",
+  "social": {
     "github": "Checkout my GitHub",
     "linkedIn": "Follow me on LinkedIn",
     "facebook": "Follow me on Facebook",
     "website": "My website"
   },
-  "cv.experience": {
+  "experience": {
     "title": "Experience"
   },
-  "cv.skills": {
+  "skills": {
     "title": "Skills"
   },
-  "cv.langs": {
+  "langs": {
     "title": "Languages"
   },
-  "cv.education": {
+  "education": {
     "title": "Education"
   }
 }

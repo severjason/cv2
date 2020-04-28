@@ -1,13 +1,11 @@
-import React, { ReactElement } from 'react';
 import Grid from '@material-ui/core/Grid';
-import CakeIcon from '@material-ui/icons/Cake';
-import PhoneIcon from '@material-ui/icons/Phone';
-import EmailIcon from '@material-ui/icons/Email';
 import { makeStyles } from '@material-ui/core/styles';
-import moment from 'moment';
+import CakeIcon from '@material-ui/icons/Cake';
+import EmailIcon from '@material-ui/icons/Email';
+import PhoneIcon from '@material-ui/icons/Phone';
+import React, { ReactElement } from 'react';
 
 import data from '../../data';
-import { DEFAULT_DATE_FORMAT } from '../../constants';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -57,8 +55,8 @@ const Info = () => {
   const classes = useStyles();
 
   return (
-    <Grid container={true} className={classes.root}>
-      <Item icon={<CakeIcon/>} title={moment(data.dateOfBirth, DEFAULT_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)}/>
+    <Grid container className={classes.root}>
+      <Item icon={<CakeIcon/>} title={new Date(data.dateOfBirth).toLocaleDateString()}/>
       <Item
         icon={<PhoneIcon/>}
         title={

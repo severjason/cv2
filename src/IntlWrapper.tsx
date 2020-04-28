@@ -1,28 +1,29 @@
-import React, { useEffect, useState } from 'react';
 import { Redirect } from '@reach/router';
-import { IntlProvider } from 'react-intl';
+import React, { useEffect, useState, Fragment } from 'react';
+import { withTranslation, WithTranslation } from 'react-i18next';
 import { LANGS } from './constants';
-import { flattenMessages } from './utils';
 
-type Props = {
+type OwnProps = {
   lang?: string;
 };
 
-const IntlWrapper: React.FC<Props> = ({children, lang: pathLang}) => {
+type Props = WithTranslation & OwnProps;
+
+const IntlWrapper: React.FC<Props> = ({children, lang: pathLang, i18n}) => {
   const [lang, setLang] = useState(LANGS.en.lang);
 
   useEffect(() => {
     const langValue = Object.keys(LANGS).find(key => LANGS[key].route === pathLang);
     if (langValue) {
-      setLang(langValue);
+      i18n.changeLanguage(langValue).then(() => setLang(langValue));
     }
-  }, [pathLang]);
+  }, [pathLang, i18n]);
 
   return LANGS[lang] ? (
-    <IntlProvider locale={lang} messages={flattenMessages(LANGS[lang].messages)}>
+    <Fragment>
       {children}
-    </IntlProvider>
+    </Fragment>
   ) : <Redirect to={`/${LANGS.en.route}`}/>;
 };
 
-export default IntlWrapper;
+export default withTranslation()(IntlWrapper);

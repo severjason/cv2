@@ -1,12 +1,12 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 
-import Experience from '../experience';
-import Skills from '../skills';
-import Langs from '../langs';
 import Education from '../education';
+import Experience from '../experience';
+import Langs from '../langs';
 import Profile from '../profile';
+import Skills from '../skills';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,18 +31,18 @@ const Main: React.FC = () => {
 
   return (
     <Grid className={classes.root}>
-      <Grid container={true} className={classes.container}>
-        <Grid item={true} xs={12} sm={12} md={12} className={classes.item}>
+      <Grid container className={classes.container}>
+        <Grid item xs={12} sm={12} md={12} className={classes.item}>
           <Profile/>
         </Grid>
-        <Grid item={true} xs={12} sm={12} md={7} className={classes.item}>
+        <Grid item xs={12} sm={12} md={7} className={classes.item}>
           <Experience/>
         </Grid>
-        <Grid item={true} xs={12} sm={12} md={5} className={classes.item}>
+        <Grid item xs={12} sm={12} md={5} className={classes.item}>
           <Skills/>
           <Education/>
         </Grid>
-        <Grid item={true} xs={12} sm={12} md={12} className={classes.item}>
+        <Grid item xs={12} sm={12} md={12} className={classes.item}>
           <Langs/>
         </Grid>
       </Grid>

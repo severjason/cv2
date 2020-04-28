@@ -1,0 +1,27 @@
+{
+  "firstName": "Сергій",
+  "lastName": "Северинов",
+  "title": "Front-End Розробник",
+  "langSwitch": "Перейти на англійську",
+  "at": "у",
+  "visit": "Відвідати",
+  "profile": "Профіль",
+  "social": {
+    "github": "Мій GitHub",
+    "linkedIn": "Мій LinkedIn",
+    "facebook": "Мій Facebook",
+    "website": "Мій сайт"
+  },
+  "experience": {
+    "title": "Досвід"
+  },
+  "skills": {
+    "title": "Навички"
+  },
+  "langs": {
+    "title": "Мови"
+  },
+  "education": {
+    "title": "Освіта"
+  }
+}

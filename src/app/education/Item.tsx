@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CalendarIcon from '@material-ui/icons/DateRange';
 
-import { EducationItem } from '../types';
+import type { EducationItem } from '../types';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,11 +45,11 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, addition}) =>
 
   return (
     <Paper className={classes.root}>
-      <Grid container={true} wrap="wrap" direction="column">
+      <Grid container wrap="wrap" direction="column">
         <Typography variant="body2" className={classes.role}>
           {role}
         </Typography>
-        <Grid item={true} className={classes.time}>
+        <Grid item className={classes.time}>
           <CalendarIcon color="primary" className={classes.icon}/>
           <Typography color="primary">
             {`${startDate} - ${endDate}`}

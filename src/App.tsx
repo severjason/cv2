@@ -1,12 +1,13 @@
-import React from 'react';
+import { grey } from '@material-ui/core/colors';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
+import type { RouteComponentProps } from '@reach/router';
+import React from 'react';
 
-import Header from './app/header';
 import Footer from './app/footer';
+import Header from './app/header';
 import Main from './app/main';
 import IntlWrapper from './IntlWrapper';
-import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,12 +21,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-type Props = {
-  path?: string;
-  lang?: string;
-};
+type Params = {
+  lang: string;
+}
 
-const App: React.FC<Props> = ({lang}) => {
+const App: React.FC<RouteComponentProps<Params>> = ({lang}) => {
 
   const classes = useStyles();
 

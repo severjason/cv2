@@ -1,10 +1,12 @@
-import React from 'react';
-import { useIntl } from 'react-intl';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { GithubIcon, LinkedinIcon, Facebook } from '../icons';
 import data from '../../data';
 
 const useStyles = makeStyles(theme => ({
@@ -20,40 +22,38 @@ const useStyles = makeStyles(theme => ({
 
 const Socials = () => {
 
-  const intl = useIntl();
+  const {t} = useTranslation();
 
   const classes = useStyles();
 
-  const getSocial = (value: string) => `${intl.messages[`cv.social.${value}`]}`;
-
   return (
-    <Grid container={true} className={classes.root} justify="center">
+    <Grid container className={classes.root} justify="center">
       <IconButton
         rel="noreferrer noopener"
         target="_blank"
-        title={getSocial('github')}
+        title={t('social.github')}
         href={data.github}
         className={classes.button}
       >
-        <GithubIcon/>
+        <GitHubIcon/>
       </IconButton>
       <IconButton
         rel="noreferrer noopener"
         target="_blank"
-        title={getSocial('linkedIn')}
+        title={t('social.linkedIn')}
         href={data.linkedIn}
         className={classes.button}
       >
-        <LinkedinIcon/>
+        <LinkedInIcon/>
       </IconButton>
       <IconButton
         rel="noreferrer noopener"
         target="_blank"
-        title={getSocial('facebook')}
+        title={t('social.facebook')}
         href={data.facebook}
         className={classes.button}
       >
-        <Facebook/>
+        <FacebookIcon/>
       </IconButton>
     </Grid>
   );

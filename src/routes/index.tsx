@@ -4,10 +4,10 @@ import { Router, Redirect } from '@reach/router';
 import App from '../App';
 import { LANGS } from '../constants';
 
-const Routes: React.FC = () => (
+const Routes = () => (
   <Router>
-    <Redirect noThrow={true} from="/" to={`/${LANGS.en.lang}`}/>
     <App path="/:lang"/>
+    <Redirect noThrow from="*" to={`/${LANGS.en.lang}`}/>
   </Router>
 );
 

@@ -25,7 +25,7 @@ const Item: React.FC<LangItem> = ({title, level}) => {
   const classes = useStyles();
 
   return (
-    <Grid container={true} alignItems="center" className={classes.root}>
+    <Grid container alignItems="center" className={classes.root}>
       <Typography variant="body2" className={classes.title}>
         {title}:
       </Typography>

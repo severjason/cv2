@@ -1,18 +1,18 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
 import CalendarIcon from '@material-ui/icons/DateRange';
 import OpenIcon from '@material-ui/icons/Launch';
-import { useIntl } from 'react-intl';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { ExperienceItem } from '../types';
 import { ListIcon } from '../shared';
+import { ExperienceItem } from '../types';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -60,14 +60,14 @@ const useStyles = makeStyles(theme => ({
 
 const Item: React.FC<ExperienceItem> = ({company, endDate, role, startDate, list, link}) => {
 
-  const intl = useIntl();
+  const {t} = useTranslation();
 
   const classes = useStyles();
 
   return (
     <Paper className={classes.root}>
-      <Grid container={true} wrap="wrap" direction="column">
-        <Grid container={true}>
+      <Grid container wrap="wrap" direction="column">
+        <Grid container>
           <Typography variant="body2" className={classes.role}>
             {role}
             <span className={classes.divider}>{`|`}</span>
@@ -82,14 +82,14 @@ const Item: React.FC<ExperienceItem> = ({company, endDate, role, startDate, list
               rel="noopener noreferrer"
               href={link}
               className={classes.iconButton}
-              title={`${intl.messages['cv.visit']}`}
+              title={`${t('visit')}`}
             >
               <OpenIcon className={classes.visit}/>
             </IconButton>
           )}
 
         </Grid>
-        <Grid item={true} className={classes.time}>
+        <Grid item className={classes.time}>
           <CalendarIcon color="primary" className={classes.icon}/>
           <Typography color="primary">
             {`${startDate} - ${endDate}`}
@@ -97,7 +97,7 @@ const Item: React.FC<ExperienceItem> = ({company, endDate, role, startDate, list
         </Grid>
       </Grid>
       {list.length > 0 && (
-        <List disablePadding={true}>
+        <List disablePadding>
           {list.map(item => (
             <ListItem key={item.text} className={classes.listItem}>
               {list.length > 1 && (
@@ -120,7 +120,7 @@ const Item: React.FC<ExperienceItem> = ({company, endDate, role, startDate, list
                     rel="noopener noreferrer"
                     href={item.link}
                     className={classes.iconButton}
-                    title={`${intl.messages['cv.visit']}`}
+                    title={`${t('visit')}`}
                   >
                     <OpenIcon className={classes.visit}/>
                   </IconButton>

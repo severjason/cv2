@@ -1,13 +1,13 @@
-import React from 'react';
 import Paper from '@material-ui/core/Paper';
-import SkillIcon from '@material-ui/icons/Keyboard';
-import { useIntl } from 'react-intl';
 import { makeStyles } from '@material-ui/core/styles';
+import SkillIcon from '@material-ui/icons/Keyboard';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Title } from '../shared';
-import Item from './Item';
-import { SkillsData } from '../types';
 import data from '../../data';
+import { Title } from '../shared';
+import { SkillsData } from '../types';
+import Item from './Item';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -18,15 +18,15 @@ const useStyles = makeStyles(theme => ({
 
 const Skills = () => {
 
-  const intl = useIntl();
+  const {t, i18n} = useTranslation();
 
   const classes = useStyles();
 
-  const skillsData = data[intl.locale] && data[intl.locale].skills;
+  const skillsData = data[i18n.language] && data[i18n.language].skills;
 
   return (
     <React.Fragment>
-      <Title icon={SkillIcon} text={`${intl.messages['cv.skills.title']}`}/>
+      <Title icon={SkillIcon} text={`${t('skills.title')}`}/>
       <Paper className={classes.paper}>
         {skillsData && skillsData.map((skill: SkillsData) => (
           <Item key={skill.title} title={skill.title} list={skill.list}/>

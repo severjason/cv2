@@ -6,6 +6,9 @@ import { CssBaseline } from '@material-ui/core';
 import theme from './lib/material-ui/theme';
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
+import i18n from './i18next';
+
+i18n();
 
 ReactDOM.render((
   <MuiThemeProvider theme={theme}>
