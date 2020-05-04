@@ -1,6 +1,17 @@
 import { CVData } from './app/types';
 import img from './assets/avatar.jpg';
 
+const COMMON_DATA = {
+  en: {
+    location: 'Zaporizhzhia, Ukraine',
+    role: 'Frontend developer'
+  },
+  ua: {
+    location: 'Запоріжжя, Україна',
+    role: 'Frontend розробник'
+  },
+};
+
 const en: CVData = {
   profile: 'I am Front-End Developer who is able to create all variety of websites and applications ' +
     ' - from simple landing page to complex server side rendering progressive web application with offline support. ',
@@ -9,32 +20,27 @@ const en: CVData = {
       startDate: 'May 2018',
       endDate: 'present',
       company: 'LightIT',
-      role: 'Front-End Developer',
+      role: COMMON_DATA.en.role,
+      location: COMMON_DATA.en.location,
       link: 'https://light-it.net/',
       list: [
         {
           text: 'Landing website for trip related project',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Next.js, Material-UI.',
         },
         {
           text: 'Trip related project with firestore database. ' +
             'Responsible for UI development. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.',
         },
         {
           text: 'Financial institution project specializing in short term high-risk lending. ' +
             'Responsible for UI development and future supporting. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.'
         },
         {
           text: 'Form widget for Wordpress website. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form.'
         },
         {
           text: 'Cryptocurrency news analysis project. ' +
             'Implemented new design and rebuilt from SPA to SSR + PWA. ',
-          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js),' +
-            ' Styled-components, Semantic-UI, Highcharts, Jest, Enzyme.',
         },
         {
           text: 'Different short-term projects.'
@@ -51,17 +57,16 @@ const en: CVData = {
     {
       startDate: 'August 2018',
       endDate: 'April 2019',
-      company: 'Upwork',
-      role: 'Front-End Developer',
-      link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
+      company: 'Local Insights',
+      role: COMMON_DATA.en.role,
+      link: 'https://localinsights.io/',
+      location: 'Remote',
       list: [
         {
-          title: 'Local Insights',
           text: 'data provider focused on real time property records, building permits, tax assessments and more.' +
             'I was responsible for adding new features, design update, ' +
             'bug fixing, code refactoring of existing application. ',
           link: 'https://localinsights.io/',
-          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js), Material-UI, Firebase.'
         }
       ],
     },
@@ -69,12 +74,12 @@ const en: CVData = {
       startDate: 'April 2018',
       endDate: 'May 2018',
       company: 'CHP',
-      role: 'Front-End Developer',
+      role: COMMON_DATA.en.role,
+      location: COMMON_DATA.en.location,
+      link: 'https://chp.zp.ua/',
       list: [
         {
           text: 'Landing for local air conditioning company.',
-          link: 'https://chp.zp.ua/',
-          technologies: 'HTML5, CSS3, React, Redux, Typescript.'
         }
       ],
     },
@@ -82,7 +87,9 @@ const en: CVData = {
       startDate: 'August 2014',
       endDate: 'February 2015',
       company: 'oDesk',
-      role: 'PHP/JS Developer',
+      role: 'Web developer',
+      location: 'Remote',
+      link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
       list: [
         {
           text: 'Short-term projects.',
@@ -217,33 +224,28 @@ const uk: CVData = {
       startDate: 'Травень 2018',
       endDate: 'теп. час',
       company: 'LightIT',
-      role: 'Front-End Розробник',
+      role: COMMON_DATA.ua.role,
+      location: COMMON_DATA.ua.location,
       link: 'https://light-it.net/',
       list: [
         {
           text: 'Лендінг сторінка для проекту, пов\'язаному з подорожами',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Next.js, Material-UI.',
         },
         {
           text: 'Проект, пов\'язаний з подорожами та використанням бази данних firestore. ' +
             'Відповідальний за розробку UI. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, Firebase, Firestore.',
         },
         {
           text: 'Проект фінансової установи, ' +
             'що спеціалізується на короткостроковому високоризиковому кредитуванні. ' +
             'Відповідальний за розробку UI та подальшу підтримку.',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form, Material-UI, AWS Amplify.',
         },
         {
           text: 'Форма-віджет для сайту на Wordpress. ',
-          technologies: 'HTML5, CSS3, Typescript, React, Redux, Redux-form.'
         },
         {
           text: 'Проект для аналізу новин по кріптовалютам. ' +
             'Впроваджено новий дизайн та перебудовано з SPA на SSR + PWA. ',
-          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js),' +
-            ' Styled-components, Semantic-UI, Highcharts, Jest, Enzyme.',
         },
         {
           text: 'Різні короткострокові проекти.'
@@ -261,7 +263,8 @@ const uk: CVData = {
       startDate: 'Серпень 2018',
       endDate: 'Квітень 2019',
       company: 'Upwork',
-      role: 'Front-End Розробник',
+      role: COMMON_DATA.ua.role,
+      location: 'Віддалено',
       link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
       list: [
         {
@@ -271,7 +274,6 @@ const uk: CVData = {
             'Я був відповідальний за додавання нових функцій, оновлення дизайну, ' +
             'виправлення багів, рефакторинг коду.',
           link: 'https://localinsights.io/',
-          technologies: 'HTML5, CSS3, React, Redux, SSR (Next.js), Material-UI, Firebase.'
         }
       ],
     },
@@ -279,12 +281,12 @@ const uk: CVData = {
       startDate: 'Квітень 2018',
       endDate: 'Травень 2018',
       company: 'CHP',
-      role: 'Front-End Розробник',
+      role: COMMON_DATA.ua.role,
+      location: COMMON_DATA.ua.location,
       list: [
         {
           text: 'Лендінг для локальної компанії з продажу кондиціонерів.',
           link: 'https://chp.zp.ua/',
-          technologies: 'HTML5, CSS3, React, Redux, Typescript.'
         }
       ],
     },
@@ -292,7 +294,8 @@ const uk: CVData = {
       startDate: 'Серпень 2014',
       endDate: 'Лютий 2015',
       company: 'oDesk',
-      role: 'PHP/JS Розробник',
+      role: 'Веб Розробник',
+      location: 'Віддалено',
       list: [
         {
           text: 'Короткострокові проекти.',

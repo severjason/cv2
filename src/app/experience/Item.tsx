@@ -1,5 +1,6 @@
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -8,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import CalendarIcon from '@material-ui/icons/DateRange';
 import OpenIcon from '@material-ui/icons/Launch';
+import MarkerIcon from '@material-ui/icons/Room';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -25,10 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
   role: {
     fontWeight: 600,
-  },
-  company: {
-    // color: theme.palette.text.primary,
-    fontWeight: 600,
+    paddingRight: theme.spacing(0.5),
   },
   divider: {
     margin: theme.spacing(0, 1),
@@ -44,6 +43,13 @@ const useStyles = makeStyles(theme => ({
   iconButton: {
     padding: theme.spacing(0.625),
   },
+  location: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  company: {
+    fontWeight: 600,
+  },
   listItem: {
     padding: 0,
   },
@@ -58,86 +64,99 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Item: React.FC<ExperienceItem> = ({company, endDate, role, startDate, list, link}) => {
+const Item: React.FC<ExperienceItem> =
+  ({
+     company,
+     endDate,
+     role,
+     startDate,
+     list,
+     location,
+     link
+   }) => {
 
-  const {t} = useTranslation();
+    const {t} = useTranslation();
 
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <Paper className={classes.root}>
-      <Grid container wrap="wrap" direction="column">
-        <Grid container>
-          <Typography variant="body2" className={classes.role}>
-            {role}
-            <span className={classes.divider}>{`|`}</span>
-          </Typography>
-          <Typography color="primary" variant="body2" className={classes.company}>
-            {company}
-          </Typography>
-          {link && (
-            <IconButton
-              color="primary"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={link}
-              className={classes.iconButton}
-              title={`${t('visit')}`}
-            >
-              <OpenIcon className={classes.visit}/>
-            </IconButton>
-          )}
-
+    return (
+      <Paper className={classes.root}>
+        <Grid container wrap="wrap" direction="column">
+          <Grid container>
+            <Typography variant="body2" className={classes.role}>
+              {role}
+              <span>{` ${t('at')}`}</span>
+            </Typography>
+            {link ? (
+              <Link
+                color="textPrimary"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={link}
+                variant="body2"
+                underline="always"
+                className={classes.company}
+                title={`${t('visit')}`}
+              >
+                {company}
+              </Link>
+            ) : (
+              <Typography variant="body2" className={classes.company}>
+                {company}
+              </Typography>
+            )}
+          </Grid>
+          <Grid container>
+            <Typography className={classes.location}>
+              <MarkerIcon className={classes.icon}/>
+            </Typography>
+            <Typography>
+              {location}
+            </Typography>
+          </Grid>
+          <Grid container className={classes.time}>
+            <CalendarIcon color="primary" className={classes.icon}/>
+            <Typography color="primary">
+              {`${startDate} - ${endDate}`}
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item className={classes.time}>
-          <CalendarIcon color="primary" className={classes.icon}/>
-          <Typography color="primary">
-            {`${startDate} - ${endDate}`}
-          </Typography>
-        </Grid>
-      </Grid>
-      {list.length > 0 && (
-        <List disablePadding>
-          {list.map(item => (
-            <ListItem key={item.text} className={classes.listItem}>
-              {list.length > 1 && (
-                <ListIcon/>
-              )}
-              <ListItemText>
-                {item.title && (
-                  <span>
+        {list.length > 0 && (
+          <List disablePadding>
+            {list.map(item => (
+              <ListItem key={item.text} className={classes.listItem}>
+                {list.length > 1 && (
+                  <ListIcon/>
+                )}
+                <ListItemText>
+                  {item.title && (
+                    <span>
                     <span className={classes.title}>
                       {item.title}
                     </span>
-                    {` - `}
+                      {` - `}
                   </span>
-                )}
-                {item.text}
-                {item.link && (
-                  <IconButton
-                    color="primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={item.link}
-                    className={classes.iconButton}
-                    title={`${t('visit')}`}
-                  >
-                    <OpenIcon className={classes.visit}/>
-                  </IconButton>
-                )}
-                <br/>
-                {item.technologies && (
-                  <span className={classes.technologies}>
-                    {item.technologies}
-                  </span>
-                )}
-              </ListItemText>
-            </ListItem>
-          ))}
-        </List>
-      )}
-    </Paper>
-  );
-};
+                  )}
+                  {item.text}
+                  {item.link && (
+                    <IconButton
+                      color="primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={item.link}
+                      className={classes.iconButton}
+                      title={`${t('visit')}`}
+                    >
+                      <OpenIcon className={classes.visit}/>
+                    </IconButton>
+                  )}
+                </ListItemText>
+              </ListItem>
+            ))}
+          </List>
+        )}
+      </Paper>
+    );
+  };
 
 export default Item;

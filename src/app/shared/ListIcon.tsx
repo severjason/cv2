@@ -1,6 +1,7 @@
 import React from 'react';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Icon from '@material-ui/icons/ChevronRightOutlined';
+import Typography from '@material-ui/core/Typography';
+// import Icon from '@material-ui/icons/ChevronRightOutlined';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -9,7 +10,10 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     color: theme.palette.primary.main,
-    fontSize: 18,
+    fontSize: 24,
+    paddingBottom: theme.spacing(0.25),
+    textAlign: 'center',
+    width: '100%',
   }
 }));
 
@@ -19,7 +23,10 @@ const ListIcon = () => {
 
   return (
     <ListItemIcon className={classes.root}>
-      <Icon className={classes.icon}/>
+      <Typography className={classes.icon}>
+        {'\u2022'}
+      </Typography>
+
     </ListItemIcon>
   );
 };

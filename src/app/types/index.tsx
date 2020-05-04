@@ -12,13 +12,13 @@ export type ExperienceItem = {
   company: string;
   role: string;
   list: ListItem[];
+  location: string;
   link?: string;
 };
 
 export type ListItem = {
   text: string;
   title?: string;
-  technologies?: string;
   link?: string;
 };
 

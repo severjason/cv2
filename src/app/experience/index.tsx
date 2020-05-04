@@ -29,6 +29,7 @@ const Experience = () => {
           role={exp.role}
           list={exp.list}
           link={exp.link}
+          location={exp.location}
         />
       ))}
     </Grid>
