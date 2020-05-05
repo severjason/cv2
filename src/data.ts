@@ -1,4 +1,4 @@
-import { CVData } from './app/types';
+import { CVData, SkillListItem } from './app/types';
 import img from './assets/avatar.jpg';
 
 const COMMON_DATA = {
@@ -11,6 +11,73 @@ const COMMON_DATA = {
     role: 'Frontend розробник'
   },
 };
+
+const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
+  main: [
+    [
+      {name: 'HTML5'},
+      {name: 'CSS3'},
+      {name: 'SCSS'},
+    ],
+    [
+      {name: 'TypeScript', important: true},
+      {name: 'JavaScript', important: true},
+    ],
+    [
+      {name: 'React', important: true},
+      {name: 'Redux', important: true},
+      {name: 'Material-UI', important: true},
+      {name: 'SSR (Next.js)', important: true},
+    ],
+    [
+      {name: 'REST API', important: true},
+      {name: 'PWA'},
+      {name: 'Storybook'},
+      {name: 'Responsive Design'},
+    ],
+    [
+      {name: 'Firebase', important: true},
+      {name: 'Firestore'},
+    ],
+    [
+      {name: 'Jest'},
+      {name: 'AWS-Amplify'},
+      {name: 'Semantic-UI'},
+      {name: 'Styled-components'},
+      {name: 'Highcharts'},
+      {name: 'Bootstrap'},
+    ],
+    [
+      {
+        name: 'WebStorm',
+        important: true,
+      },
+      {name: 'git'},
+      {name: 'Linux (Ubuntu)'},
+    ],
+  ],
+  additional: [
+    [
+      {name: 'node.js'},
+      {name: 'express'},
+      {name: 'mongoDb'},
+    ],
+    [
+      {name: 'GraphQL'},
+      {name: 'Apollo'},
+    ],
+    [
+      {name: 'Functional programming'},
+    ],
+    [
+      {name: 'CI/CD'},
+      {name: 'Webpack'},
+      {name: 'Docker'},
+      {name: 'SEO'},
+    ]
+  ]
+}
+
 
 const en: CVData = {
   profile: 'I am Front-End Developer who is able to create all variety of websites and applications ' +
@@ -26,29 +93,20 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'Landing website for trip related project',
+          text: 'UI development for trip related project with PWA and offline support, realtime updates, ' +
+            'internationalization, dynamic forms, third-party services integration (Leaflet, Booking, Expedia, Viator etc.), ' +
+            'events tracking, user-generated content and SEO optimization.',
         },
         {
-          text: 'Trip related project with firestore database. ' +
-            'Responsible for UI development. ',
+          text: 'Components architecture design, dynamic forms implementation, ' +
+            'form widget integration for internal financial institution project specializing in short term high-risk lending in Georgia and Romania.',
         },
         {
-          text: 'Financial institution project specializing in short term high-risk lending. ' +
-            'Responsible for UI development and future supporting. ',
+          text: 'Implementing major code refactoring from SPA to SSR (Next.js) + PWA ' +
+            'for cryptocurrency news analysis project.',
         },
         {
-          text: 'Form widget for Wordpress website. ',
-        },
-        {
-          text: 'Cryptocurrency news analysis project. ' +
-            'Implemented new design and rebuilt from SPA to SSR + PWA. ',
-        },
-        {
-          text: 'Different short-term projects.'
-        },
-        {
-          title: 'LightIT Frontend Labs',
-          text: 'took part as one of speakers.',
+          text: 'Speaker for internal offline and online meetups.',
         },
         {
           text: 'Interns code review and training, interviews conducting.'
@@ -64,10 +122,8 @@ const en: CVData = {
       location: 'Remote',
       list: [
         {
-          text: 'data provider focused on real time property records, building permits, tax assessments and more.' +
-            'I was responsible for adding new features, design update, ' +
-            'bug fixing, code refactoring of existing application. ',
-          link: 'https://localinsights.io/',
+          text: 'Adding new features, design update, ' +
+            'bug fixing, TTFB improvement, code refactoring of existing application.',
         }
       ],
     },
@@ -80,7 +136,7 @@ const en: CVData = {
       link: 'https://chp.zp.ua/',
       list: [
         {
-          text: 'Landing for local air conditioning company.',
+          text: 'Design and creating landing page for local air conditioning company.',
         }
       ],
     },
@@ -93,93 +149,20 @@ const en: CVData = {
       link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
       list: [
         {
-          text: 'Short-term projects.',
+          text: 'Bug fixing for small hort-term projects.',
         }
       ],
     },
   ],
   skills: [
     {
-      title: 'Programming languages',
-      list: [
-        {
-          name: 'JavaScript',
-          important: true,
-        },
-        {
-          name: 'Typescript',
-          important: true,
-        },
-      ]
+      title: 'Main',
+      list: TECH.main,
     },
     {
-      title: 'Technologies',
-      list: [
-        {
-          name: 'React',
-          important: true,
-        },
-        {
-          name: 'Redux',
-          important: true,
-        },
-        {
-          name: 'Material-UI',
-          important: true,
-        },
-        {name: 'SSR (Next.js)', important: true},
-        {name: 'Jest + enzyme'},
-        {name: 'AWS-Amplify'},
-        {name: 'Semantic-UI'},
-        {name: 'Highcharts'},
-        {name: 'Bootstrap'},
-        {name: 'Functional programming'},
-        {name: 'GraphQL'},
-        {name: 'Apollo'},
-      ]
-    },
-    {
-      title: 'Web',
-      list: [
-        {name: 'HTML5'},
-        {name: 'CSS3'},
-        {name: 'PWA'},
-        {name: 'Firebase', important: true},
-        {name: 'Firestore'},
-        {name: 'Storybook'},
-        {name: 'SCSS'},
-        {name: 'Styled-components'},
-        {name: 'Responsive Design'},
-      ]
-    },
-    {
-      title: 'Development tools',
-      list: [
-        {
-          name: 'WebStorm',
-          important: true,
-        },
-      ]
-    },
-    {
-      title: 'Operating systems',
-      list: [
-        {name: 'Linux (Ubuntu)'},
-        {name: 'Windows'},
-      ]
-    },
-    {
-      title: 'Other',
-      list: [
-        {name: 'git'},
-        {name: 'CRA'},
-        {name: 'Webpack'},
-        {name: 'CI/CD'},
-        {name: 'lodash'},
-        {name: 'Docker (basic level)'},
-        {name: 'SEO (basic level)'},
-      ]
-    },
+      title: 'Additional',
+      list: TECH.additional,
+    }
   ],
   langs: [
     {
@@ -231,11 +214,10 @@ const uk: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'Лендінг сторінка для проекту, пов\'язаному з подорожами',
-        },
-        {
-          text: 'Проект, пов\'язаний з подорожами та використанням бази данних firestore. ' +
-            'Відповідальний за розробку UI. ',
+          text: 'Розробка UI для туристичного проекту з PWA та офлайн підтримкою, ' +
+            'оновленням данних в реальному часі, інтернаціоналізацією, динамічними формами, ' +
+            'інтеграцією зі сторонніми сервісами (Leaflet, Booking, Expedia, Viator та ін.), ' +
+            'відстеженням подій, створеним користувачами контентом та SEO оптимізацією.',
         },
         {
           text: 'Проект фінансової установи, ' +
@@ -243,22 +225,19 @@ const uk: CVData = {
             'Відповідальний за розробку UI та подальшу підтримку.',
         },
         {
-          text: 'Форма-віджет для сайту на Wordpress. ',
+          text: 'Розробка архітектури компонентів, впровадження динамічних форм, інтеграція форми-віджету для' +
+            ' внутрішнього проекту фінансової установи, що спеціалізується ' +
+            'на короткостроковому високоризиковому кредитуванні.',
         },
         {
-          text: 'Проект для аналізу новин по кріптовалютам. ' +
-            'Впроваджено новий дизайн та перебудовано з SPA на SSR + PWA. ',
+          text: 'Впровадження значного реформування коду з SPA на SSR + PWA пректу для аналізу новин по кріптовалютам.'
         },
         {
-          text: 'Різні короткострокові проекти.'
-        },
-        {
-          title: 'LightIT Frontend Labs',
-          text: 'Приймав участь в курсах як один із спікеров.',
+          text: 'Спікер у внутрішніх онлайн та офлайн конференціях.',
         },
         {
           text: 'Код ревью та навчання стажерів, проведення інтерв\'ю.'
-        }
+        },
       ],
     },
     {
@@ -285,6 +264,7 @@ const uk: CVData = {
       company: 'Chp',
       role: COMMON_DATA.ua.role,
       location: COMMON_DATA.ua.location,
+      link: 'https://chp.zp.ua/',
       list: [
         {
           text: 'Лендінг для локальної компанії з продажу кондиціонерів.',
@@ -298,6 +278,7 @@ const uk: CVData = {
       company: 'oDesk',
       role: 'Веб Розробник',
       location: 'Віддалено',
+      link: 'https://www.upwork.com/o/profiles/users/_~01fff6263f5fd6f506/',
       list: [
         {
           text: 'Короткострокові проекти.',
@@ -307,86 +288,13 @@ const uk: CVData = {
   ],
   skills: [
     {
-      title: 'Мови програмування',
-      list: [
-        {
-          name: 'JavaScript',
-          important: true,
-        },
-        {
-          name: 'Typescript',
-          important: true,
-        },
-      ]
+      title: 'Основні',
+      list: TECH.main,
     },
     {
-      title: 'Технології',
-      list: [
-        {
-          name: 'React',
-          important: true,
-        },
-        {
-          name: 'Redux',
-          important: true,
-        },
-        {
-          name: 'Material-UI',
-          important: true,
-        },
-        {name: 'SSR (Next.js)', important: true},
-        {name: 'Jest + enzyme'},
-        {name: 'AWS-Amplify'},
-        {name: 'Semantic-UI'},
-        {name: 'Highcharts'},
-        {name: 'Bootstrap'},
-        {name: 'Функціональне програмування'},
-        {name: 'GraphQL'},
-        {name: 'Apollo'},
-      ]
-    },
-    {
-      title: 'Веб-технології',
-      list: [
-        {name: 'HTML5'},
-        {name: 'CSS3'},
-        {name: 'PWA'},
-        {name: 'Firebase', important: true},
-        {name: 'Firestore'},
-        {name: 'Storybook'},
-        {name: 'SCSS'},
-        {name: 'Styled-components'},
-        {name: 'Responsive Design'},
-      ]
-    },
-    {
-      title: 'Засоби розробки',
-      list: [
-        {
-          name: 'WebStorm',
-          important: true,
-        },
-      ]
-    },
-    {
-      title: 'Операційні системи',
-      list: [
-        {name: 'Linux (Ubuntu)'},
-        {name: 'Windows'},
-      ]
-    },
-    {
-      title: 'Інше',
-      list: [
-        {name: 'git'},
-        {name: 'CRA'},
-        {name: 'Webpack'},
-        {name: 'CI/CD'},
-        {name: 'lodash'},
-        {name: 'Docker (базовий рівень)'},
-        {name: 'SEO (базовий рівень)'},
-      ]
-    },
+      title: 'Додаткові',
+      list: TECH.additional,
+    }
   ],
   langs: [
     {

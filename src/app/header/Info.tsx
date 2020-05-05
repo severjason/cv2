@@ -5,6 +5,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MarkerIcon from '@material-ui/icons/Room';
 import React, { ReactElement } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import data from '../../data';
 import { useLang } from '../../hooks';
@@ -58,13 +59,21 @@ const Info = () => {
 
   const {currentLang} = useLang();
 
+  const {t} = useTranslation();
+
   return (
     <Grid container className={classes.root}>
       <Item icon={<CakeIcon/>} title={new Date(data.dateOfBirth).toLocaleDateString()}/>
       <Item
         icon={<PhoneIcon/>}
         title={
-          <a target="_blank" rel="noopener noreferrer" className={classes.link} href={`tel:${data.phone}`}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+            href={`tel:${data.phone}`}
+            title={t('links.phone')}
+          >
             {data.phone}
           </a>
         }
@@ -72,7 +81,13 @@ const Info = () => {
       <Item
         icon={<EmailIcon/>}
         title={
-          <a target="_blank" rel="noopener noreferrer" className={classes.link} href={`mailto:${data.email}`}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+            href={`mailto:${data.email}`}
+            title={t('links.email')}
+          >
             {data.email}
           </a>
         }
@@ -80,7 +95,13 @@ const Info = () => {
       <Item
         icon={<MarkerIcon/>}
         title={
-          <a target="_blank" rel="noopener noreferrer" className={classes.link} href={data.locationLink}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.link}
+            href={data.locationLink}
+            title={t('links.location')}
+          >
             {data[currentLang].location}
           </a>
         }

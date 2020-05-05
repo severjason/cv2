@@ -1,10 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Chip from '@material-ui/core/Chip';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+
 import Typography from '@material-ui/core/Typography';
 
-import type { SkillsData } from '../types';
+import type { SkillListItem, SkillsData } from '../types';
+import {ListIcon} from '../shared';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,18 +17,22 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontWeight: 600,
   },
-  chip: {
-    margin: theme.spacing(1),
-    marginLeft: 0,
-  },
   important: {
     fontWeight: 600,
+  },
+  listItem: {
+    padding: 0,
   }
 }));
 
 const Item: React.FC<SkillsData> = ({title, list}) => {
 
   const classes = useStyles();
+
+  const generateSkill = ({name, important}: SkillListItem, index: number, length: number) => {
+    const skill = `${name}${length < 2 || index === length - 1 ? '.' : ', '}`;
+    return important ? <span key={name} className={classes.important}>{skill}</span> : skill;
+  }
 
   return (
     <Grid container direction="column" className={classes.root}>
@@ -34,19 +42,16 @@ const Item: React.FC<SkillsData> = ({title, list}) => {
         </Typography>
       </Grid>
       <Grid>
-        {list.map(skill => (
-          <Chip
-            key={skill.name}
-            label={skill.name}
-            size="small"
-            className={[
-              classes.chip,
-              skill.important ? classes.important : ''
-            ].join(' ')}
-            color="primary"
-            variant={'outlined'}
-          />
-        ))}
+        <List disablePadding>
+          {list.map((skills, index) => (
+            <ListItem key={index} className={classes.listItem}>
+              <ListIcon/>
+              <ListItemText>
+                {skills.map((skill, index) => generateSkill(skill, index, skills.length))}
+              </ListItemText>
+            </ListItem>
+          ))}
+        </List>
       </Grid>
     </Grid>
   );

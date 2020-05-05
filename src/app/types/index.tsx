@@ -33,7 +33,7 @@ export type EducationItem = {
 
 export type SkillsData = {
   title: string;
-  list: SkillListItem[];
+  list: SkillListItem[][];
 };
 
 export type SkillListItem = {

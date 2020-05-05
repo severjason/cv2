@@ -6,6 +6,11 @@
   "at": "at",
   "visit": "Visit",
   "profile": "Profile",
+  "links": {
+    "email": "Email me",
+    "phone": "Phone me",
+    "location": "My location"
+  },
   "social": {
     "github": "Checkout my GitHub",
     "linkedIn": "Follow me on LinkedIn",

@@ -6,6 +6,11 @@
   "at": "у",
   "visit": "Відвідати",
   "profile": "Профіль",
+  "links": {
+    "email": "Надіслати мені листа",
+    "phone": "Зателефонувати мені",
+    "location": "Моє місцезнаходження"
+  },
   "social": {
     "github": "Мій GitHub",
     "linkedIn": "Мій LinkedIn",
