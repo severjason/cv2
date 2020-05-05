@@ -30,7 +30,7 @@ const Profile = () => {
   return (
     <Grid container>
       <Title icon={AssignmentInd} text={`${t('profile')}`}/>
-      <Paper className={classes.paper}>
+      <Paper className={classes.paper} component="p">
         {profileData}
       </Paper>
     </Grid>

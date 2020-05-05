@@ -73,7 +73,7 @@ const en: CVData = {
     {
       startDate: 'April 2018',
       endDate: 'May 2018',
-      company: 'CHP',
+      company: 'Chp',
       role: COMMON_DATA.en.role,
       location: COMMON_DATA.en.location,
       link: 'https://chp.zp.ua/',
@@ -280,7 +280,7 @@ const uk: CVData = {
     {
       startDate: 'Квітень 2018',
       endDate: 'Травень 2018',
-      company: 'CHP',
+      company: 'Chp',
       role: COMMON_DATA.ua.role,
       location: COMMON_DATA.ua.location,
       list: [

@@ -31,8 +31,8 @@ const LangSwitcher = () => {
 
   return (
     <Grid item className={classes.root}>
-      <Link to={`/${link}`}>
-        <IconButton title={t['langSwitch']}>
+      <Link to={`/${link}`} title={t('langSwitch')}>
+        <IconButton title={t('langSwitch')}>
           <Icon/>
         </IconButton>
       </Link>

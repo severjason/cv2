@@ -96,7 +96,7 @@ const Item: React.FC<ExperienceItem> =
                 variant="body2"
                 underline="always"
                 className={classes.company}
-                title={`${t('visit')}`}
+                title={`${t('visit')} ${company}`}
               >
                 {company}
               </Link>
