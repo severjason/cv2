@@ -3,9 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import CakeIcon from '@material-ui/icons/Cake';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
+import MarkerIcon from '@material-ui/icons/Room';
 import React, { ReactElement } from 'react';
 
 import data from '../../data';
+import { useLang } from '../../hooks';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -54,6 +56,8 @@ const Info = () => {
 
   const classes = useStyles();
 
+  const {currentLang} = useLang();
+
   return (
     <Grid container className={classes.root}>
       <Item icon={<CakeIcon/>} title={new Date(data.dateOfBirth).toLocaleDateString()}/>
@@ -70,6 +74,14 @@ const Info = () => {
         title={
           <a target="_blank" rel="noopener noreferrer" className={classes.link} href={`mailto:${data.email}`}>
             {data.email}
+          </a>
+        }
+      />
+      <Item
+        icon={<MarkerIcon/>}
+        title={
+          <a target="_blank" rel="noopener noreferrer" className={classes.link} href={data.locationLink}>
+            {data[currentLang].location}
           </a>
         }
       />

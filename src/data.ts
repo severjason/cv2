@@ -15,6 +15,7 @@ const COMMON_DATA = {
 const en: CVData = {
   profile: 'I am Front-End Developer who is able to create all variety of websites and applications ' +
     ' - from simple landing page to complex server side rendering progressive web application with offline support. ',
+  location: COMMON_DATA.en.location,
   experience: [
     {
       startDate: 'May 2018',
@@ -219,6 +220,7 @@ const en: CVData = {
 const uk: CVData = {
   profile: 'Я Front-End Розробник, що може створити вебсайти та додатки різноманітної складності' +
     ' - від простих лендінгів до комплексних PWA додатків з SSR та підтримкою оффлайн. ',
+  location: COMMON_DATA.ua.location,
   experience: [
     {
       startDate: 'Травень 2018',
@@ -427,6 +429,7 @@ export default {
   addition: 'React',
   phone: '+38 (050) 543-60-17',
   email: 'severynov.sergii@gmail.com',
+  locationLink: 'https://goo.gl/maps/1JsxNBFiDycahTAQ8',
   github: 'https://github.com/severjason',
   website: 'https://sergii.severynov.com/en',
   facebook: 'https://www.facebook.com/severjason',
