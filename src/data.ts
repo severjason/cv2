@@ -41,7 +41,7 @@ const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
     ],
     [
       {name: 'Jest'},
-      {name: 'AWS-Amplify'},
+      /*{name: 'AWS-Amplify'},*/
       {name: 'Semantic-UI'},
       {name: 'Styled-components'},
       {name: 'Highcharts'},
@@ -68,6 +68,10 @@ const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
     ],
     [
       {name: 'Functional programming'},
+    ],
+    [
+      {name: 'AWS services (S3, Route 53, CloudFront)'},
+      {name: 'AWS-Amplify'},
     ],
     [
       {name: 'CI/CD'},
