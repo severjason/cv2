@@ -70,8 +70,7 @@ const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
       {name: 'Functional programming'},
     ],
     [
-      {name: 'AWS services (S3, Route 53, CloudFront)'},
-      {name: 'AWS-Amplify'},
+      {name: 'AWS services (S3, Route 53, CloudFront, amplify)'},
     ],
     [
       {name: 'CI/CD'},
