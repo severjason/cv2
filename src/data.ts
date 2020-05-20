@@ -41,7 +41,6 @@ const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
     ],
     [
       {name: 'Jest'},
-      /*{name: 'AWS-Amplify'},*/
       {name: 'Semantic-UI'},
       {name: 'Styled-components'},
       {name: 'Highcharts'},
@@ -61,6 +60,7 @@ const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
       {name: 'node.js'},
       {name: 'express'},
       {name: 'mongoDb'},
+      {name: 'postman'}
     ],
     [
       {name: 'GraphQL'},
