@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import teal from '@material-ui/core/colors/teal';
+import teal from '@material-ui/core/colors/blueGrey';
 import './fonts.css';
 
 const theme = createMuiTheme({

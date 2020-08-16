@@ -88,8 +88,27 @@ const en: CVData = {
   location: COMMON_DATA.en.location,
   experience: [
     {
-      startDate: 'May 2018',
+      startDate: 'June 2020',
       endDate: 'present',
+      company: 'Elementica',
+      role: COMMON_DATA.en.role,
+      location: COMMON_DATA.en.location,
+      //link: 'https://pixelteh.com/',
+      list: [
+        {
+          text: 'Project architecture development and application features design for startup',
+        },
+        {
+          text: 'UI development of blockchain-based system for registering, tracking and clearing debt.',
+        },
+        {
+          text: 'New candidates interviewing.'
+        }
+      ],
+    },
+    {
+      startDate: 'May 2018',
+      endDate: 'May 2020',
       company: 'LightIT',
       role: COMMON_DATA.en.role,
       location: COMMON_DATA.en.location,
@@ -112,7 +131,7 @@ const en: CVData = {
           text: 'Speaker for internal offline and online meetups.',
         },
         {
-          text: 'Interns code review and training, interviews conducting.'
+          text: 'Interns code review and training, interviewing new candidates.'
         }
       ],
     },
@@ -209,8 +228,27 @@ const uk: CVData = {
   location: COMMON_DATA.ua.location,
   experience: [
     {
-      startDate: 'Травень 2018',
+      startDate: 'Липень 2020',
       endDate: 'теп. час',
+      company: 'Elementica',
+      role: COMMON_DATA.ua.role,
+      location: COMMON_DATA.ua.location,
+      //link: 'https://pixelteh.com/',
+      list: [
+        {
+          text: 'Розробка архітектури та планування особливостей стартап-проекту.',
+        },
+        {
+          text: 'Розробка UI блокчейн системи для реєстрації, відстеження та очищення боргу.',
+        },
+        {
+          text: 'Проведення співбесід.'
+        }
+      ],
+    },
+    {
+      startDate: 'Травень 2018',
+      endDate: 'Травень 2020',
       company: 'LightIT',
       role: COMMON_DATA.ua.role,
       location: COMMON_DATA.ua.location,
@@ -239,7 +277,7 @@ const uk: CVData = {
           text: 'Спікер у внутрішніх онлайн та офлайн конференціях.',
         },
         {
-          text: 'Код ревью та навчання стажерів, проведення інтерв\'ю.'
+          text: 'Код ревью та навчання стажерів, проведення співбесід.'
         },
       ],
     },
