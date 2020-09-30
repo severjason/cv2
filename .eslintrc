@@ -249,15 +249,6 @@
     "@typescript-eslint/no-array-constructor": "warn",
     "@typescript-eslint/no-namespace": "error",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "warn",
-      {
-        "functions": false,
-        "classes": false,
-        "variables": false,
-        "typedefs": false
-      }
-    ],
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",
@@ -266,6 +257,7 @@
     "no-useless-constructor": "off",
     "@typescript-eslint/no-useless-constructor": "warn",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-empty-function": "warn"
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-use-before-define": "warn"
   }
 }
