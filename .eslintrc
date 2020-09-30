@@ -258,6 +258,6 @@
     "@typescript-eslint/no-useless-constructor": "warn",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-function": "warn",
-    "@typescript-eslint/no-use-before-define": "warn"
+    "@typescript-eslint/no-use-before-define": "off"
   }
 }
