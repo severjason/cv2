@@ -16,19 +16,18 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Header = () => {
-
   const classes = useStyles();
 
   return (
     <div>
       <Grid className={classes.root}>
-        <LangSwitcher/>
+        <LangSwitcher />
         <Grid container>
-          <Photo/>
-          <Titles/>
+          <Photo />
+          <Titles />
         </Grid>
       </Grid>
-      <Socials/>
+      <Socials />
     </div>
   );
 };

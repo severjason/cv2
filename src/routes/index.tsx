@@ -6,8 +6,8 @@ import { LANGS } from '../constants';
 
 const Routes = () => (
   <Router>
-    <App path="/:lang"/>
-    <Redirect noThrow from="*" to={`/${LANGS.en.lang}`}/>
+    <App path="/:lang" />
+    <Redirect noThrow from="*" to={`/${LANGS.en.lang}`} />
   </Router>
 );
 

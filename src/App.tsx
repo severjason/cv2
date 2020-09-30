@@ -23,18 +23,17 @@ const useStyles = makeStyles(theme => ({
 
 type Params = {
   lang: string;
-}
+};
 
-const App: React.FC<RouteComponentProps<Params>> = ({lang}) => {
-
+const App: React.FC<RouteComponentProps<Params>> = ({ lang }) => {
   const classes = useStyles();
 
   return (
     <IntlWrapper lang={lang}>
       <Container className={classes.root}>
-        <Header/>
-        <Main/>
-        <Footer/>
+        <Header />
+        <Main />
+        <Footer />
       </Container>
     </IntlWrapper>
   );

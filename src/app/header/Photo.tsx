@@ -26,12 +26,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Photo = () => {
-
   const classes = useStyles();
 
   return (
     <Grid item className={classes.root}>
-      <Avatar className={classes.avatar} component="div" src={photo}/>
+      <Avatar className={classes.avatar} component="div" src={photo} />
     </Grid>
   );
 };

@@ -10,18 +10,17 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(1),
     '&:last-child': {
       marginBottom: 0,
-    }
+    },
   },
   title: {
     fontWeight: 600,
   },
   level: {
     paddingLeft: theme.spacing(1),
-  }
+  },
 }));
 
-const Item: React.FC<LangItem> = ({title, level}) => {
-
+const Item: React.FC<LangItem> = ({ title, level }) => {
   const classes = useStyles();
 
   return (

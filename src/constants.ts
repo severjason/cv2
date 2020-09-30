@@ -1,3 +1,5 @@
+import { OverridableComponent } from '@material-ui/core/OverridableComponent';
+import { SvgIconTypeMap } from '@material-ui/core';
 import { USflag, UAflag } from './app/icons';
 
 type Langs = {
@@ -5,9 +7,9 @@ type Langs = {
     route: string;
     lang: string;
     nextRoute: string;
-    flagIcon: any;
+    flagIcon: OverridableComponent<SvgIconTypeMap>;
   };
-}
+};
 export const LANGS: Langs = {
   en: {
     route: 'en',
@@ -20,5 +22,5 @@ export const LANGS: Langs = {
     lang: 'uk',
     nextRoute: 'en',
     flagIcon: UAflag,
-  }
+  },
 };

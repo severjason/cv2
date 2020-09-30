@@ -11,7 +11,7 @@ type OwnProps = {
 
 type Props = WithTranslation & OwnProps;
 
-const IntlWrapper: React.FC<Props> = ({children, lang: pathLang, i18n}) => {
+const IntlWrapper: React.FC<Props> = ({ children, lang: pathLang, i18n }) => {
   const [lang, setLang] = useState(LANGS.en.lang);
 
   useEffect(() => {
@@ -22,10 +22,10 @@ const IntlWrapper: React.FC<Props> = ({children, lang: pathLang, i18n}) => {
   }, [pathLang, i18n]);
 
   return LANGS[lang] ? (
-    <LangContext.Provider value={lang}>
-      {children}
-    </LangContext.Provider>
-  ) : <Redirect to={`/${LANGS.en.route}`}/>;
+    <LangContext.Provider value={lang}>{children}</LangContext.Provider>
+  ) : (
+    <Redirect to={`/${LANGS.en.route}`} />
+  );
 };
 
 export default withTranslation()(IntlWrapper);

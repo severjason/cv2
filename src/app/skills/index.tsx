@@ -18,10 +18,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Skills = () => {
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
-
-  const {currentLang} = useLang();
+  const { currentLang } = useLang();
 
   const classes = useStyles();
 
@@ -29,11 +28,10 @@ const Skills = () => {
 
   return (
     <React.Fragment>
-      <Title icon={SkillIcon} text={`${t('skills.title')}`}/>
+      <Title icon={SkillIcon} text={`${t('skills.title')}`} />
       <Paper className={classes.paper}>
-        {skillsData && skillsData.map((skill: SkillsData) => (
-          <Item key={skill.title} title={skill.title} list={skill.list}/>
-        ))}
+        {skillsData &&
+          skillsData.map((skill: SkillsData) => <Item key={skill.title} title={skill.title} list={skill.list} />)}
       </Paper>
     </React.Fragment>
   );

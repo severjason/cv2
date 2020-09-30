@@ -36,8 +36,7 @@ type ItemProps = {
   icon: ReactElement;
 };
 
-const Item: React.FC<ItemProps> = ({title, icon}) => {
-
+const Item: React.FC<ItemProps> = ({ title, icon }) => {
   const classes = useStyles();
 
   return (
@@ -53,17 +52,16 @@ const Item: React.FC<ItemProps> = ({title, icon}) => {
 };
 
 const Info = () => {
-
   const classes = useStyles();
 
-  const {currentLang} = useLang();
+  const { currentLang } = useLang();
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Grid container className={classes.root}>
       <Item
-        icon={<PhoneIcon/>}
+        icon={<PhoneIcon />}
         title={
           <a
             target="_blank"
@@ -77,7 +75,7 @@ const Info = () => {
         }
       />
       <Item
-        icon={<EmailIcon/>}
+        icon={<EmailIcon />}
         title={
           <a
             target="_blank"
@@ -91,7 +89,7 @@ const Info = () => {
         }
       />
       <Item
-        icon={<MarkerIcon/>}
+        icon={<MarkerIcon />}
         title={
           <a
             target="_blank"

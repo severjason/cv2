@@ -14,19 +14,15 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(0.25),
     textAlign: 'center',
     width: '100%',
-  }
+  },
 }));
 
 const ListIcon = () => {
-
   const classes = useStyles();
 
   return (
     <ListItemIcon className={classes.root}>
-      <Typography className={classes.icon}>
-        {'\u2022'}
-      </Typography>
-
+      <Typography className={classes.icon}>{'\u2022'}</Typography>
     </ListItemIcon>
   );
 };

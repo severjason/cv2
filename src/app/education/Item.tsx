@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   link: {
     '&:hover': {
       color: theme.palette.primary.main,
-    }
+    },
   },
   time: {
     alignItems: 'center',
@@ -39,8 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 type Props = EducationItem;
 
-const Item: React.FC<Props> = ({company, endDate, role, startDate, addition}) => {
-
+const Item: React.FC<Props> = ({ company, endDate, role, startDate }) => {
   const classes = useStyles();
 
   return (
@@ -50,15 +49,10 @@ const Item: React.FC<Props> = ({company, endDate, role, startDate, addition}) =>
           {role}
         </Typography>
         <Grid item className={classes.time}>
-          <CalendarIcon color="primary" className={classes.icon}/>
-          <Typography color="primary">
-            {`${startDate} - ${endDate}`}
-          </Typography>
+          <CalendarIcon color="primary" className={classes.icon} />
+          <Typography color="primary">{`${startDate} - ${endDate}`}</Typography>
         </Grid>
-        <Typography >
-          {company}
-        </Typography>
-
+        <Typography>{company}</Typography>
       </Grid>
     </Paper>
   );

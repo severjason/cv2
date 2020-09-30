@@ -18,15 +18,14 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 0,
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(1),
-    }
+    },
   },
 }));
 
 const Langs = () => {
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
-
-  const {currentLang} = useLang();
+  const { currentLang } = useLang();
 
   const classes = useStyles();
 
@@ -34,11 +33,9 @@ const Langs = () => {
 
   return (
     <Grid container>
-      <Title icon={LangIcon} text={`${t('langs.title')}`}/>
+      <Title icon={LangIcon} text={`${t('langs.title')}`} />
       <Paper className={classes.paper}>
-        {langData && langData.map((lang: LangItem) => (
-          <Item key={lang.title} title={lang.title} level={lang.level}/>
-        ))}
+        {langData && langData.map((lang: LangItem) => <Item key={lang.title} title={lang.title} level={lang.level} />)}
       </Paper>
     </Grid>
   );

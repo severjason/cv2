@@ -11,12 +11,11 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     color: theme.palette.primary.contrastText,
-  }
+  },
 }));
 
 const Footer = () => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const classes = useStyles();
 
@@ -24,9 +23,7 @@ const Footer = () => {
 
   return (
     <Grid container className={classes.root} justify="center" alignItems="center">
-      <Typography className={classes.text}>
-        {`${fullName} @ ${new Date().getFullYear()}`}
-      </Typography>
+      <Typography className={classes.text}>{`${fullName} @ ${new Date().getFullYear()}`}</Typography>
     </Grid>
   );
 };

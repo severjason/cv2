@@ -5,7 +5,6 @@ import { en, uk } from './translations';
 
 const { NODE_ENV } = process.env;
 
-
 const i18nConfig = () => {
   i18n
     // load translation using xhr -> see /public/locales
@@ -20,15 +19,7 @@ const i18nConfig = () => {
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
       detection: {
-        order: [
-          'querystring',
-          'cookie',
-          'localStorage',
-          'navigator',
-          'htmlTag',
-          'path',
-          'subdomain',
-        ],
+        order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
       },
       resources: {
         en: {

@@ -1,6 +1,7 @@
+import { OverridableComponent } from '@material-ui/core/OverridableComponent';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, SvgIconTypeMap } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -13,19 +14,18 @@ const useStyles = makeStyles(theme => ({
 }));
 
 type OwnProps = {
-  icon: any;
+  icon: OverridableComponent<SvgIconTypeMap>;
   text: string;
 };
 
-const Title: React.FC<OwnProps> = ({icon, text}) => {
-
+const Title: React.FC<OwnProps> = ({ icon, text }) => {
   const classes = useStyles();
 
   const Icon = icon;
 
   return (
-    <Grid container={true} className={classes.root} alignItems="center" >
-      <Icon color="primary" className={classes.icon}/>
+    <Grid container={true} className={classes.root} alignItems="center">
+      <Icon color="primary" className={classes.icon} />
       <Typography color="primary" variant="h5">
         {text}
       </Typography>

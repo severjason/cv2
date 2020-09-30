@@ -17,7 +17,7 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: teal,
-  }
+  },
 });
 
 export default theme;

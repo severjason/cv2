@@ -3,7 +3,7 @@ import { LangContext } from '../context/lang';
 
 function useLang() {
   return {
-    currentLang: useContext(LangContext)
+    currentLang: useContext(LangContext),
   };
 }
 

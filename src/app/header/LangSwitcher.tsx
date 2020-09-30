@@ -18,10 +18,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const LangSwitcher = () => {
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
-
-  const {currentLang} = useLang();
+  const { currentLang } = useLang();
 
   const classes = useStyles();
 
@@ -33,7 +32,7 @@ const LangSwitcher = () => {
     <Grid item className={classes.root}>
       <Link to={`/${link}`} title={t('langSwitch')}>
         <IconButton title={t('langSwitch')}>
-          <Icon/>
+          <Icon />
         </IconButton>
       </Link>
     </Grid>

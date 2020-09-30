@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     padding: theme.spacing(1, 1, 0, 1),
     '&:last-child': {
-      padding: theme.spacing(0, 1, 1, 1)
+      padding: theme.spacing(0, 1, 1, 1),
     },
   },
   item: {
@@ -27,24 +27,23 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Main: React.FC = () => {
-
   const classes = useStyles();
 
   return (
     <Grid className={classes.root}>
       <Grid container className={classes.container}>
         <Grid item xs={12} sm={12} md={12} className={classes.item}>
-          <Profile/>
+          <Profile />
         </Grid>
         <Grid item xs={12} sm={12} md={12} className={classes.item}>
-          <Experience/>
+          <Experience />
         </Grid>
         <Grid item xs={12} sm={12} md={6} className={classes.item}>
-          <Skills/>
+          <Skills />
         </Grid>
         <Grid item xs={12} sm={12} md={6} className={classes.item}>
-          <Education/>
-          <Langs/>
+          <Education />
+          <Langs />
         </Grid>
       </Grid>
     </Grid>

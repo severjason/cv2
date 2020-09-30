@@ -18,10 +18,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Profile = () => {
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
-
-  const {currentLang} = useLang();
+  const { currentLang } = useLang();
 
   const profileData = data[currentLang] && data[currentLang].profile;
 
@@ -29,7 +28,7 @@ const Profile = () => {
 
   return (
     <Grid container>
-      <Title icon={AssignmentInd} text={`${t('profile')}`}/>
+      <Title icon={AssignmentInd} text={`${t('profile')}`} />
       <Paper className={classes.paper} component="p">
         {profileData}
       </Paper>

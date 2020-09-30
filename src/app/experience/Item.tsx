@@ -64,99 +64,81 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Item: React.FC<ExperienceItem> =
-  ({
-     company,
-     endDate,
-     role,
-     startDate,
-     list,
-     location,
-     link
-   }) => {
+const Item: React.FC<ExperienceItem> = ({ company, endDate, role, startDate, list, location, link }) => {
+  const { t } = useTranslation();
 
-    const {t} = useTranslation();
+  const classes = useStyles();
 
-    const classes = useStyles();
-
-    return (
-      <Paper className={classes.root}>
-        <Grid container wrap="wrap" direction="column">
-          <Grid container>
-            <Typography variant="body2" className={classes.role}>
-              {role}
-              <span>{` ${t('at')}`}</span>
+  return (
+    <Paper className={classes.root}>
+      <Grid container wrap="wrap" direction="column">
+        <Grid container>
+          <Typography variant="body2" className={classes.role}>
+            {role}
+            <span>{` ${t('at')}`}</span>
+          </Typography>
+          {link ? (
+            <Link
+              color="textPrimary"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={link}
+              variant="body2"
+              underline="always"
+              className={classes.company}
+              title={`${t('visit')} ${company}`}
+            >
+              {company}
+            </Link>
+          ) : (
+            <Typography variant="body2" className={classes.company}>
+              {company}
             </Typography>
-            {link ? (
-              <Link
-                color="textPrimary"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={link}
-                variant="body2"
-                underline="always"
-                className={classes.company}
-                title={`${t('visit')} ${company}`}
-              >
-                {company}
-              </Link>
-            ) : (
-              <Typography variant="body2" className={classes.company}>
-                {company}
-              </Typography>
-            )}
-          </Grid>
-          <Grid container>
-            <Typography className={classes.location}>
-              <MarkerIcon className={classes.icon}/>
-            </Typography>
-            <Typography>
-              {location}
-            </Typography>
-          </Grid>
-          <Grid container className={classes.time}>
-            <CalendarIcon color="primary" className={classes.icon}/>
-            <Typography color="primary">
-              {`${startDate} - ${endDate}`}
-            </Typography>
-          </Grid>
+          )}
         </Grid>
-        {list.length > 0 && (
-          <List disablePadding>
-            {list.map(item => (
-              <ListItem key={item.text} className={classes.listItem}>
-                {list.length > 1 && (
-                  <ListIcon/>
-                )}
-                <ListItemText>
-                  {item.title && (
-                    <span>
-                    <span className={classes.title}>
-                      {item.title}
-                    </span>
-                      {` - `}
+        <Grid container>
+          <Typography className={classes.location}>
+            <MarkerIcon className={classes.icon} />
+          </Typography>
+          <Typography>{location}</Typography>
+        </Grid>
+        <Grid container className={classes.time}>
+          <CalendarIcon color="primary" className={classes.icon} />
+          <Typography color="primary">{`${startDate} - ${endDate}`}</Typography>
+        </Grid>
+      </Grid>
+      {list.length > 0 && (
+        <List disablePadding>
+          {list.map(item => (
+            <ListItem key={item.text} className={classes.listItem}>
+              {list.length > 1 && <ListIcon />}
+              <ListItemText>
+                {item.title && (
+                  <span>
+                    <span className={classes.title}>{item.title}</span>
+                    {` - `}
                   </span>
-                  )}
-                  {item.text}
-                  {item.link && (
-                    <IconButton
-                      color="primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={item.link}
-                      className={classes.iconButton}
-                      title={`${t('visit')}`}
-                    >
-                      <OpenIcon className={classes.visit}/>
-                    </IconButton>
-                  )}
-                </ListItemText>
-              </ListItem>
-            ))}
-          </List>
-        )}
-      </Paper>
-    );
-  };
+                )}
+                {item.text}
+                {item.link && (
+                  <IconButton
+                    color="primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={item.link}
+                    className={classes.iconButton}
+                    title={`${t('visit')}`}
+                  >
+                    <OpenIcon className={classes.visit} />
+                  </IconButton>
+                )}
+              </ListItemText>
+            </ListItem>
+          ))}
+        </List>
+      )}
+    </Paper>
+  );
+};
 
 export default Item;

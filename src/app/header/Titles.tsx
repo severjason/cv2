@@ -22,13 +22,12 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(1),
   },
   divider: {
-    backgroundColor: fade(theme.palette.primary.contrastText, .3),
+    backgroundColor: fade(theme.palette.primary.contrastText, 0.3),
   },
 }));
 
 const Titles = () => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const classes = useStyles();
 
@@ -36,15 +35,15 @@ const Titles = () => {
 
   return (
     <Grid item className={classes.root}>
-      <MetaTitle/>
+      <MetaTitle />
       <Typography variant="h4" className={classes.name}>
         {fullName}
       </Typography>
       <Typography variant="h5" className={classes.title}>
         {t('title')}
       </Typography>
-      <Divider component="hr" className={classes.divider}/>
-      <Info/>
+      <Divider component="hr" className={classes.divider} />
+      <Info />
     </Grid>
   );
 };

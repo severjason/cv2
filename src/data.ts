@@ -4,86 +4,57 @@ import img from './assets/avatar.jpg';
 const COMMON_DATA = {
   en: {
     location: 'Zaporizhzhia, Ukraine',
-    role: 'Frontend developer'
+    role: 'Frontend developer',
   },
   ua: {
     location: 'Запоріжжя, Україна',
-    role: 'Frontend розробник'
+    role: 'Frontend розробник',
   },
 };
 
-const TECH: {main: SkillListItem[][]; additional: SkillListItem[][]} = {
+const TECH: { main: SkillListItem[][]; additional: SkillListItem[][] } = {
   main: [
+    [{ name: 'HTML5' }, { name: 'CSS3' }, { name: 'SCSS' }],
     [
-      {name: 'HTML5'},
-      {name: 'CSS3'},
-      {name: 'SCSS'},
+      { name: 'TypeScript', important: true },
+      { name: 'JavaScript', important: true },
     ],
     [
-      {name: 'TypeScript', important: true},
-      {name: 'JavaScript', important: true},
+      { name: 'React', important: true },
+      { name: 'Redux', important: true },
+      { name: 'Material-UI', important: true },
+      { name: 'SSR (Next.js)', important: true },
     ],
+    [{ name: 'REST API', important: true }, { name: 'PWA' }, { name: 'Storybook' }, { name: 'Responsive Design' }],
+    [{ name: 'Firebase', important: true }, { name: 'Firestore' }],
     [
-      {name: 'React', important: true},
-      {name: 'Redux', important: true},
-      {name: 'Material-UI', important: true},
-      {name: 'SSR (Next.js)', important: true},
-    ],
-    [
-      {name: 'REST API', important: true},
-      {name: 'PWA'},
-      {name: 'Storybook'},
-      {name: 'Responsive Design'},
-    ],
-    [
-      {name: 'Firebase', important: true},
-      {name: 'Firestore'},
-    ],
-    [
-      {name: 'Jest'},
-      {name: 'Semantic-UI'},
-      {name: 'Styled-components'},
-      {name: 'Highcharts'},
-      {name: 'Bootstrap'},
+      { name: 'Jest' },
+      { name: 'Semantic-UI' },
+      { name: 'Styled-components' },
+      { name: 'Highcharts' },
+      { name: 'Bootstrap' },
     ],
     [
       {
         name: 'WebStorm',
         important: true,
       },
-      {name: 'git'},
-      {name: 'Linux (Ubuntu)'},
+      { name: 'git' },
+      { name: 'Linux (Ubuntu)' },
     ],
   ],
   additional: [
-    [
-      {name: 'node.js'},
-      {name: 'express'},
-      {name: 'mongoDb'},
-      {name: 'postman'}
-    ],
-    [
-      {name: 'GraphQL'},
-      {name: 'Apollo'},
-    ],
-    [
-      {name: 'Functional programming'},
-    ],
-    [
-      {name: 'AWS services (S3, Route 53, CloudFront, amplify)'},
-    ],
-    [
-      {name: 'CI/CD'},
-      {name: 'Webpack'},
-      {name: 'Docker'},
-      {name: 'SEO'},
-    ]
-  ]
-}
-
+    [{ name: 'node.js' }, { name: 'express' }, { name: 'mongoDb' }, { name: 'postman' }],
+    [{ name: 'GraphQL' }, { name: 'Apollo' }],
+    [{ name: 'Functional programming' }],
+    [{ name: 'AWS services (S3, Route 53, CloudFront, amplify)' }],
+    [{ name: 'CI/CD' }, { name: 'Webpack' }, { name: 'Docker' }, { name: 'SEO' }],
+  ],
+};
 
 const en: CVData = {
-  profile: 'I am Front-End Developer who is able to create all variety of websites and applications ' +
+  profile:
+    'I am Front-End Developer who is able to create all variety of websites and applications ' +
     ' - from simple landing page to complex server side rendering progressive web application with offline support. ',
   location: COMMON_DATA.en.location,
   experience: [
@@ -102,8 +73,8 @@ const en: CVData = {
           text: 'UI development of blockchain-based system for registering, tracking and clearing debt.',
         },
         {
-          text: 'New candidates interviewing.'
-        }
+          text: 'New candidates interviewing.',
+        },
       ],
     },
     {
@@ -115,24 +86,27 @@ const en: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'UI development for trip related project with PWA and offline support, realtime updates, ' +
+          text:
+            'UI development for trip related project with PWA and offline support, realtime updates, ' +
             'internationalization, dynamic forms, third-party services integration (Leaflet, Booking, Expedia, Viator etc.), ' +
             'events tracking, user-generated content and SEO optimization.',
         },
         {
-          text: 'Components architecture design, dynamic forms implementation, ' +
+          text:
+            'Components architecture design, dynamic forms implementation, ' +
             'form widget integration for internal financial institution project specializing in short term high-risk lending in Georgia and Romania.',
         },
         {
-          text: 'Implementing major code refactoring from SPA to SSR (Next.js) + PWA ' +
+          text:
+            'Implementing major code refactoring from SPA to SSR (Next.js) + PWA ' +
             'for cryptocurrency news analysis project.',
         },
         {
           text: 'Speaker for internal offline and online meetups.',
         },
         {
-          text: 'Interns code review and training, interviewing new candidates.'
-        }
+          text: 'Interns code review and training, interviewing new candidates.',
+        },
       ],
     },
     {
@@ -144,9 +118,10 @@ const en: CVData = {
       location: 'Remote',
       list: [
         {
-          text: 'Adding new features, design update, ' +
+          text:
+            'Adding new features, design update, ' +
             'bug fixing, TTFB improvement, code refactoring of existing application.',
-        }
+        },
       ],
     },
     {
@@ -159,7 +134,7 @@ const en: CVData = {
       list: [
         {
           text: 'Design and creating landing page for local air conditioning company.',
-        }
+        },
       ],
     },
     {
@@ -172,7 +147,7 @@ const en: CVData = {
       list: [
         {
           text: 'Bug fixing for small hort-term projects.',
-        }
+        },
       ],
     },
   ],
@@ -184,21 +159,21 @@ const en: CVData = {
     {
       title: 'Additional',
       list: TECH.additional,
-    }
+    },
   ],
   langs: [
     {
       title: 'English',
-      level: 'Advanced'
+      level: 'Advanced',
     },
     {
       title: 'Ukrainian',
-      level: 'Native'
+      level: 'Native',
     },
     {
       title: 'Russian',
-      level: 'Native'
-    }
+      level: 'Native',
+    },
   ],
   education: [
     {
@@ -218,12 +193,13 @@ const en: CVData = {
       endDate: '2009',
       company: 'Zaporizhzhian National Technical University',
       role: 'Aviation Engines Production Technology',
-    }
+    },
   ],
 };
 
 const uk: CVData = {
-  profile: 'Я Front-End Розробник, що може створити вебсайти та додатки різноманітної складності' +
+  profile:
+    'Я Front-End Розробник, що може створити вебсайти та додатки різноманітної складності' +
     ' - від простих лендінгів до комплексних PWA додатків з SSR та підтримкою оффлайн. ',
   location: COMMON_DATA.ua.location,
   experience: [
@@ -242,8 +218,8 @@ const uk: CVData = {
           text: 'Розробка UI блокчейн системи для реєстрації, відстеження та очищення боргу.',
         },
         {
-          text: 'Проведення співбесід.'
-        }
+          text: 'Проведення співбесід.',
+        },
       ],
     },
     {
@@ -255,29 +231,32 @@ const uk: CVData = {
       link: 'https://light-it.net/',
       list: [
         {
-          text: 'Розробка UI для туристичного проекту з PWA та офлайн підтримкою, ' +
+          text:
+            'Розробка UI для туристичного проекту з PWA та офлайн підтримкою, ' +
             'оновленням данних в реальному часі, інтернаціоналізацією, динамічними формами, ' +
             'інтеграцією зі сторонніми сервісами (Leaflet, Booking, Expedia, Viator та ін.), ' +
             'відстеженням подій, створеним користувачами контентом та SEO оптимізацією.',
         },
         {
-          text: 'Проект фінансової установи, ' +
+          text:
+            'Проект фінансової установи, ' +
             'що спеціалізується на короткостроковому високоризиковому кредитуванні. ' +
             'Відповідальний за розробку UI та подальшу підтримку.',
         },
         {
-          text: 'Розробка архітектури компонентів, впровадження динамічних форм, інтеграція форми-віджету для' +
+          text:
+            'Розробка архітектури компонентів, впровадження динамічних форм, інтеграція форми-віджету для' +
             ' внутрішнього проекту фінансової установи, що спеціалізується ' +
             'на короткостроковому високоризиковому кредитуванні.',
         },
         {
-          text: 'Впровадження значного реформування коду з SPA на SSR + PWA пректу для аналізу новин по кріптовалютам.'
+          text: 'Впровадження значного реформування коду з SPA на SSR + PWA пректу для аналізу новин по кріптовалютам.',
         },
         {
           text: 'Спікер у внутрішніх онлайн та офлайн конференціях.',
         },
         {
-          text: 'Код ревью та навчання стажерів, проведення співбесід.'
+          text: 'Код ревью та навчання стажерів, проведення співбесід.',
         },
       ],
     },
@@ -291,12 +270,13 @@ const uk: CVData = {
       list: [
         {
           title: 'Local Insights',
-          text: 'провайдер даних зосереджений на обліку нерухомості в режимі реального часу, дозволах на будівництво,' +
+          text:
+            'провайдер даних зосереджений на обліку нерухомості в режимі реального часу, дозволах на будівництво,' +
             ' податкових нарахувань та інше. ' +
             'Я був відповідальний за додавання нових функцій, оновлення дизайну, ' +
             'виправлення багів, рефакторинг коду.',
           link: 'https://localinsights.io/',
-        }
+        },
       ],
     },
     {
@@ -310,7 +290,7 @@ const uk: CVData = {
         {
           text: 'Лендінг для локальної компанії з продажу кондиціонерів.',
           link: 'https://chp.zp.ua/',
-        }
+        },
       ],
     },
     {
@@ -323,7 +303,7 @@ const uk: CVData = {
       list: [
         {
           text: 'Короткострокові проекти.',
-        }
+        },
       ],
     },
   ],
@@ -335,21 +315,21 @@ const uk: CVData = {
     {
       title: 'Додаткові',
       list: TECH.additional,
-    }
+    },
   ],
   langs: [
     {
       title: 'Англійська',
-      level: 'Передовий'
+      level: 'Передовий',
     },
     {
       title: 'Українська',
-      level: 'Рідний'
+      level: 'Рідний',
     },
     {
       title: 'Російський',
-      level: 'Рідний'
-    }
+      level: 'Рідний',
+    },
   ],
   education: [
     {
@@ -369,7 +349,7 @@ const uk: CVData = {
       endDate: '2009',
       company: 'Запорізький Національний Технічний Університет',
       role: 'Технологія будування авіаційних двигунів',
-    }
+    },
   ],
 };
 
@@ -384,7 +364,6 @@ export default {
   linkedIn: 'https://www.linkedin.com/in/severjason',
   en,
   uk,
-};// tslint:disable-next-line:max-line-length
-
+}; // tslint:disable-next-line:max-line-length
 
 export const photo = img;

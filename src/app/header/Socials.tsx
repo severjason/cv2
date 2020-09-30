@@ -21,8 +21,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Socials = () => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const classes = useStyles();
 
@@ -35,7 +34,7 @@ const Socials = () => {
         href={data.github}
         className={classes.button}
       >
-        <GitHubIcon/>
+        <GitHubIcon />
       </IconButton>
       <IconButton
         rel="noreferrer noopener"
@@ -44,7 +43,7 @@ const Socials = () => {
         href={data.linkedIn}
         className={classes.button}
       >
-        <LinkedInIcon/>
+        <LinkedInIcon />
       </IconButton>
       <IconButton
         rel="noreferrer noopener"
@@ -53,7 +52,7 @@ const Socials = () => {
         href={data.facebook}
         className={classes.button}
       >
-        <FacebookIcon/>
+        <FacebookIcon />
       </IconButton>
     </Grid>
   );
