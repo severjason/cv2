@@ -1,6 +1,5 @@
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import CakeIcon from '@material-ui/icons/Cake';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MarkerIcon from '@material-ui/icons/Room';
@@ -63,7 +62,6 @@ const Info = () => {
 
   return (
     <Grid container className={classes.root}>
-      <Item icon={<CakeIcon/>} title={new Date(data.dateOfBirth).toLocaleDateString()}/>
       <Item
         icon={<PhoneIcon/>}
         title={

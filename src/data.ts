@@ -374,7 +374,6 @@ const uk: CVData = {
 };
 
 export default {
-  dateOfBirth: '1987-07-28',
   addition: 'React',
   phone: '+38 (050) 543-60-17',
   email: 'severynov.sergii@gmail.com',
